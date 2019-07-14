@@ -1,26 +1,70 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link, Route, Switch} from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import ListGroup from 'react-bootstrap/ListGroup'
+
+import Home from './components/Home'
+import Social from './components/Social'
+import WorkExperience from './components/WorkExperience'
+import Education from './components/Education'
+import Projects from './components/Projects'
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Home />
+
+        <div className="px-5">
+        <Navbar bg="dark" variant="dark" style={{
+          padding: '10px',
+          borderRadius: '5px',
+        }} expand="lg">
+          <Navbar.Brand>
+            <Link className="nav-link" to="/" style={{color: '#fff'}}>
+              <img src={require('./assets/icon.png')} width="30" height="30" className="d-inline-block align-top" alt="" />
+              {' Kenny Miu'}
+            </Link>
+          </Navbar.Brand>
+          <Nav className="mr-auto">
+            <Nav.Link>
+              <Link className="nav-link" to="/work-experience">Work Experience</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="nav-link" to="/education">Education</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="nav-link" to="/projects">Projects</Link>
+            </Nav.Link>
+          </Nav>
+          <Navbar.Collapse className="justify-content-end">
+            <Social />
+          </Navbar.Collapse>
+        </Navbar>
+        </div>
+
+        <div>
+          <Switch>
+            <Route path="/" component={Projects} exact/>
+            <Route path="/work-experience" component={WorkExperience} />
+            <Route path="/education" component={Education} />
+            <Route path="/projects" component={Projects} />
+          </Switch>
+        </div>
+
+        <div className="px-5">
+        <ListGroup>
+          <ListGroup.Item variant="secondary">Address: Toronto, Canada</ListGroup.Item>
+          <ListGroup.Item variant="secondary">Phone: +1 (289) 818 4885</ListGroup.Item>
+          <ListGroup.Item variant="secondary">Email: kennymiu2@gmail.com</ListGroup.Item>
+          <ListGroup.Item variant="secondary">Social: <Social /></ListGroup.Item>
+        </ListGroup>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
