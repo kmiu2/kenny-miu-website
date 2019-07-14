@@ -33,10 +33,10 @@ class App extends React.Component {
               <Link className="nav-link" to="/work-experience">Work Experience</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="nav-link" to="/education">Education</Link>
+              <Link className="nav-link" to="/projects">Projects</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="nav-link" to="/projects">Projects</Link>
+              <Link className="nav-link" to="/education">Education</Link>
             </Nav.Link>
           </Nav>
           <Navbar.Collapse className="justify-content-end">
@@ -44,7 +44,7 @@ class App extends React.Component {
           </Navbar.Collapse>
         </Navbar>
         </div>
-
+        <br />
         <div>
           <Switch>
             <Route path="/" component={Projects} exact/>
@@ -53,9 +53,11 @@ class App extends React.Component {
             <Route path="/projects" component={Projects} />
           </Switch>
         </div>
-
+        <br />
         <div className="px-5">
-        <ListGroup>
+        <ListGroup style={{
+          fontSize: '1.2rem'
+        }}>
           <ListGroup.Item variant="secondary">Address: Toronto, Canada</ListGroup.Item>
           <ListGroup.Item variant="secondary">Phone: +1 (289) 818 4885</ListGroup.Item>
           <ListGroup.Item variant="secondary">Email: kennymiu2@gmail.com</ListGroup.Item>

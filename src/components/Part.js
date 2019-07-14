@@ -1,6 +1,16 @@
 import React, { Component } from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Image from 'react-bootstrap/Image'
+import styled from 'styled-components'
+import NavLink from 'react-bootstrap/NavLink';
+
+const Link = styled(NavLink)`     
+    background: transparent;
+    color: inherit;
+    &:hover {
+        color: #8eb0e8;
+    }
+`
 
 export default class Part extends Component {
     constructor(props) {
@@ -10,31 +20,41 @@ export default class Part extends Component {
         this.img = this.props.img
         this.title = this.props.title
         this.location = this.props.location
-        this.tools = this.props.tools
+        this.sub = this.props.sub
         this.desc = this.props.desc
+        this.date = this.props.date
     }
     render() {
         return (
-            <div>
+            <div className="container">
             <Jumbotron style={{
-                backgroundColor: 'rgba(255,255,255,0.8)',
+                backgroundColor: 'transparent',
                 fontFamily: 'Helvetica',
                 textAlign: 'center',
-                height: '1300px',
-                marginLeft: '-20px',
-                marginRight: '-20px'
+                height: '100%'
             }}>
-                <a href={this.link} style={{textDecoration: 'none', color: 'inherit'}}>
-                <h1 style={{
-                    fontSize: '3.5rem',
-                    fontWeight: '350',
-                }}>{this.title}</h1></a>
+                <p style={{
+                    fontSize: '1.2rem',
+                    fontStyle: 'italic'
+                }}>{this.date}</p>
                 <br />
-                <h3>{this.location}</h3>
-                <Image src={require(`../assets/${this.img}`)} rounded fluid width="60%"/>
+                {this.link !== '' ? 
+                    <Link href={this.link}>
+                    <h1 style={{
+                        fontSize: '3.5rem',
+                        fontWeight: '350',
+                    }}>{this.title}</h1></Link>
+                    :
+                    <h1 style={{
+                        fontSize: '3.5rem',
+                        fontWeight: '350',
+                    }}>{this.title}</h1>}
+                <br />
+                {this.location !== "" ? <h3>{this.location}</h3> : null}
+                {this.img !== undefined ? <Image src={require(`../assets/${this.img}`)} rounded fluid width="60%"/> : null}
                 <br />
                 <br />
-                <h4><b>Tools: {this.tools}</b></h4>
+                {this.sub !== "" ? <h4><b>{this.sub}</b></h4> : null}
                 <br />
                 <p style={{
                     fontSize: '1.5rem',

@@ -27,7 +27,7 @@ export default class Home extends Component {
                     fontFamily: 'Times'
                 }}>Full-Stack Developer, ML and AI Adventurist, Computer and Physics Nerd</h3>
                 <br />
-                <img src={require('../assets/me.png')} width="60%" alt="" />
+                <img src={require('../assets/me.png')} width="60%" alt="" style={{borderRadius: '20px'}}/>
                 <br />
                 <br />
                 <p>
