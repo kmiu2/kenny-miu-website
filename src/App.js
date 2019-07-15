@@ -17,7 +17,7 @@ class App extends React.Component {
       <div>
         <Home />
 
-        <div className="px-5">
+        <div className="px-3">
         <Navbar bg="dark" variant="dark" style={{
           padding: '10px',
           borderRadius: '5px',
@@ -54,7 +54,7 @@ class App extends React.Component {
           </Switch>
         </div>
         <br />
-        <div className="px-5">
+        <div className="px-3">
         <ListGroup style={{
           fontSize: '1.2rem'
         }}>

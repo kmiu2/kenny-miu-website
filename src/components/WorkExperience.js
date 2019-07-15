@@ -17,7 +17,7 @@ const Col = styled(oldCol)`
 export default class WorkExperience extends Component {
     render() {
         return (
-            <div className="px-5">
+            <div>
             <Container fluid>
                 <Row noGutters>
                 <Col>

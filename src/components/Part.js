@@ -41,12 +41,12 @@ export default class Part extends Component {
                 {this.link !== '' ? 
                     <Link href={this.link}>
                     <h1 style={{
-                        fontSize: '3.5rem',
+                        fontSize: 'auto',
                         fontWeight: '350',
                     }}>{this.title}</h1></Link>
                     :
                     <h1 style={{
-                        fontSize: '3.5rem',
+                        fontSize: 'auto',
                         fontWeight: '350',
                     }}>{this.title}</h1>}
                 <br />

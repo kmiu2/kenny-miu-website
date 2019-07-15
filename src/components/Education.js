@@ -17,7 +17,7 @@ const Col = styled(oldCol)`
 export default class Education extends Component {
     render() {
         return (
-            <div className="px-5">
+            <div>
             <Container fluid>
             <Row noGutters>
             <Col>
@@ -25,7 +25,7 @@ export default class Education extends Component {
                     date="Sept 2019 - April 2024"
                     img='uw_icon.svg' 
                     link='https://uwaterloo.ca/' 
-                    title='Nanotechnology Engineer Student'
+                    title={['Nano', <wbr></wbr>, 'technology Engineer Student']}
                     location='University of Waterloo' 
                     sub=""
                     desc={["Waterloo goes beyond the classroom, to a place where experience is the teacher. Beyond problems to solutions that address social, technical and economic needs. Beyond the laboratory, to the research that propels industries, organizations and society. Waterloo is at the forefront of innovation and is home to transformational research and inspired learning.",

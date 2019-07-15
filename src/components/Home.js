@@ -13,7 +13,7 @@ export default class Home extends Component {
                 textAlign: 'center'
             }}>
                 <h1 style={{
-                    fontSize: '5rem',
+                    fontSize: '4.5rem',
                     fontWeight: '900',
                     textTransform: 'uppercase'
                 }}>Kenny Miu</h1>
@@ -27,7 +27,7 @@ export default class Home extends Component {
                     fontFamily: 'Times'
                 }}>Full-Stack Developer, ML and AI Adventurist, Computer and Physics Nerd</h3>
                 <br />
-                <img src={require('../assets/me.png')} width="60%" alt="" style={{borderRadius: '20px'}}/>
+                <img src={require('../assets/me.jpg')} width="65%" alt="" style={{borderRadius: '20px'}}/>
                 <br />
                 <br />
                 <p>
