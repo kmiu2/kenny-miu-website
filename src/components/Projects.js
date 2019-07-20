@@ -31,7 +31,7 @@ export default class Projects extends Component {
                     desc={['Using React, I was able to create several quick and responsive SPAs such as this website.',
                         <br />,
                         <br />,
-                        'By using React Router and the SPA architecture, this website is able to instantly switch between subpages']}
+                        'By using React Router and the SPA architecture, this website is able to instantly switch between subpages.']}
                 />
             </Col>
             <Col>
@@ -60,10 +60,10 @@ export default class Projects extends Component {
                     title='NodeJS Developer' 
                     location='St. Augustine Catholic High School' 
                     sub='Tools: NodeJS, npm, Cloud Platform, Firebase, CronJobs' 
-                    desc={['Alongside creating the front end of the St. Augustine CHS App, I was also responsible for maintaining the back end of the app',
+                    desc={['Alongside creating the front end of the St. Augustine CHS App, I was also responsible for maintaining the back end of the app.',
                         <br />,
                         <br />,
-                        "I was responsible for creating the functions that cemented the app's importance in the school (such as sending push notifications for new announcements). Using third party resources like CronJobs, I programmed algorithms of varying functionality from creating daily backups of the database to deleting the top student voted song each morning"
+                        "I was responsible for creating the functions that cemented the app's importance in the school (such as sending push notifications for new announcements). Using third party resources like CronJobs, I programmed algorithms of varying functionality from creating daily backups of the database to deleting the top student voted song each morning."
                         ]}
                 />
             </Col>

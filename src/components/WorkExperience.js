@@ -31,7 +31,7 @@ export default class WorkExperience extends Component {
                         desc={['Right from a young age, I aspired to learn more about possibilities technology can bring to people. By working as a computer instructor, I was able to share my passion for technology, especially programming, with not just children of all ages, but also some adults who share that interest I have.',
                         <br />,
                         <br />,
-                        "As an instructor for both children and adults, I taught a variety of topics from the basics such as ifs and loops up to more advanced topics like OOP and Inheritance"]}
+                        "As an instructor for both children and adults, I taught a variety of topics from the basics such as ifs and loops up to more advanced topics like OOP and Inheritance."]}
                     />    
                 </Col>
                 <Col>
