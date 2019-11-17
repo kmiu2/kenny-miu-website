@@ -25,7 +25,7 @@ export default class Home extends Component {
                 <h3 style={{
                     fontStyle: 'italic',
                     fontFamily: 'Times'
-                }}>Full-Stack Developer, ML and AI Adventurist, Computer and Physics Nerd</h3>
+                }}>3D Designer, Robotics Adventurist</h3>
                 <br />
                 <img src={require('../assets/me.jpg')} width="65%" alt="" style={{borderRadius: '20px'}}/>
                 <br />

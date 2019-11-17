@@ -10,9 +10,6 @@ export default class Social extends Component {
               <Button variant="outline-link" href="https://www.linkedin.com/in/kennymiu/">
                 <img src={require('../assets/linkedin.svg')} width="30" height="30" alt=""/>
               </Button>
-              <Button variant="outline-link" href="https://github.com/kmiu2">
-                <img src={require('../assets/github.svg')} width="30" height="30" alt=""/>
-              </Button>
               <Button variant="outline-link" href="https://www.instagram.com/kmiu2/">
                 <img src={require('../assets/instagram.svg')} width="30" height="30" alt=""/>
               </Button>

@@ -22,6 +22,35 @@ export default class Projects extends Component {
             <Row noGutters>
             <Col>
                 <Part
+                    img='sw.png'
+                    link='' 
+                    title='SolidWorks Projects'
+                    location='' 
+                    sub='Tools: SolidWorks' 
+                    desc={['By using SolidWorks, a 3D Modelling Software, I created a variety of parts and assemblies. From designing simple chairs to fully functioning soapbox cars, I worked through a variety of challenges and became proficient with 3D modelling software.',
+                        <br />,
+                        <br />,
+                        'When creating assemblies, I used the physical dynamics function of SolidWorks to simulate real life scenarios and account for stress, friction, and similar dynamics.']}
+                />
+            </Col>
+            <Col>
+                <Part
+                    img='rpi.png' 
+                    link='' 
+                    title='Raspberry Pi Projects'
+                    sub='Tools: Raspberry Pi 3' 
+                    desc={['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to pratical applications',
+                        <br />,
+                        <br />,
+                        'On the entertainment side, my projects include creating digital clocks and daily information displays. For more pratical projects, I used the raspberry pi and spare drives to create a NAS.'
+                        ]}
+                />
+            </Col>
+            </Row>
+            <br></br>
+            <Row noGutters>
+            <Col>
+                <Part
                     date=''
                     img='react.svg'
                     link='' 
@@ -51,36 +80,6 @@ export default class Projects extends Component {
             </Col>
             </Row>
             <br />
-            <Row noGutters>
-            <Col>
-                <Part 
-                    date='Sept 2018 - June 2019'
-                    img='nodejs.png' 
-                    link='https://app.staugustinechs.ca/' 
-                    title='NodeJS Developer' 
-                    location='St. Augustine Catholic High School' 
-                    sub='Tools: NodeJS, npm, Cloud Platform, Firebase, CronJobs' 
-                    desc={['Alongside creating the front end of the St. Augustine CHS App, I was also responsible for maintaining the back end of the app.',
-                        <br />,
-                        <br />,
-                        "I was responsible for creating the functions that cemented the app's importance in the school (such as sending push notifications for new announcements). Using third party resources like CronJobs, I programmed algorithms of varying functionality from creating daily backups of the database to deleting the top student voted song each morning."
-                        ]}
-                />
-            </Col>
-            
-            <Col>
-                <Part
-                    date=''
-                    img='tf.svg'
-                    link='https://github.com/kmiu2/ML-Projects' 
-                    title='Machine Learning Projects'
-                    location='' 
-                    sub='Tools: TensorFlow, Python, Gym' 
-                    desc="Using Google's TensorFlow library, I completed several projects and challenges from the Gym toolkit. Using their environments, I challenged myself to write algorithms that successfully overcome these tasks."
-                />
-            </Col>
-
-            </Row>
             </Container>
             </div>
         )
