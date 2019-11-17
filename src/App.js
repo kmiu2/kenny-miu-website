@@ -59,8 +59,8 @@ class App extends React.Component {
           fontSize: '1.2rem'
         }}>
           <ListGroup.Item variant="secondary">Address: Toronto, Canada</ListGroup.Item>
-          <ListGroup.Item variant="secondary">Phone: <a href="tel:647-863-1337">+1 (647) 863 1337</a></ListGroup.Item>
-          <ListGroup.Item variant="secondary">Email: <a href="mailto:kennymiu2@gmail.com">kennymiu2@gmail.com</a></ListGroup.Item>
+          <ListGroup.Item variant="secondary">Phone: +1 (647) 863 1337</ListGroup.Item>
+          <ListGroup.Item variant="secondary">Email: kennymiu2@gmail.com</ListGroup.Item>
           <ListGroup.Item variant="secondary">Social: <Social /></ListGroup.Item>
         </ListGroup>
         </div>
