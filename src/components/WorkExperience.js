@@ -27,7 +27,7 @@ export default class WorkExperience extends Component {
                         link='https://www.firstroboticscanada.org/' 
                         title='FIRST Robotics Mentor'
                         location='Toronto, Canada' 
-                        sub='Tools: LEGO NXT' 
+                        sub='LEGO NXT' 
                         desc='Having experience from previous competitions, I led my team to victory. Despite being the youngest team at the competition, I was still able to guide my team of 9-11 y/o to success, earning nearly all the possible points even available to obtain.'
                     />
                 </Col>
@@ -38,7 +38,7 @@ export default class WorkExperience extends Component {
                         link='https://www.markham.ca' 
                         title='Computer Instructor'
                         location='Markham, Canada' 
-                        sub='Tools: NXT Robotics, Arduino, Java, Python' 
+                        sub='NXT Robotics, Arduino, Java, Python' 
                         desc={['Right from a young age, I aspired to learn more about possibilities technology can bring to people. By working as a computer instructor, I was able to share my passion for technology, especially robotics and circuitry, with not just children of all ages, but also some adults who share that interest I have.',
                         <br />,
                         <br />,

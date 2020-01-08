@@ -10,6 +10,7 @@ import Social from './components/Social'
 import WorkExperience from './components/WorkExperience'
 import Education from './components/Education'
 import Projects from './components/Projects'
+import Showcase from './components/Showcase';
 
 class App extends React.Component {
   render() {
@@ -38,6 +39,9 @@ class App extends React.Component {
             <Nav.Link>
               <Link className="nav-link" to="/education">Education</Link>
             </Nav.Link>
+            <Nav.Link>
+              <Link className="nav-link" to="/showcase">Showcase</Link>
+            </Nav.Link>
           </Nav>
           <Navbar.Collapse className="justify-content-end">
             <Social />
@@ -51,6 +55,7 @@ class App extends React.Component {
             <Route path="/work-experience" component={WorkExperience} />
             <Route path="/education" component={Education} />
             <Route path="/projects" component={Projects} />
+            <Route path="/showcase" component={Showcase} />
           </Switch>
         </div>
         <br />
