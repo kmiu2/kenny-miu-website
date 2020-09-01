@@ -71,10 +71,10 @@ export default class Projects extends Component {
                     link='' 
                     title='Raspberry Pi Projects'
                     sub='Raspberry Pi 3' 
-                    desc={['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to pratical applications',
+                    desc={['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to practical applications',
                         <br />,
                         <br />,
-                        'On the entertainment side, my projects include creating digital clocks and daily information displays. For more pratical projects, I used the raspberry pi and spare drives to create a NAS.'
+                        'On the entertainment side, my projects include creating digital clocks and daily information displays. For more practical projects, I used the raspberry pi and spare drives to create a NAS.'
                         ]}
                 />
             </Col>
