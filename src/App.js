@@ -51,7 +51,7 @@ class App extends React.Component {
         <br />
         <div>
           <Switch>
-            <Route path="/" component={Projects} exact/>
+            <Route path="/" component={WorkExperience} exact/>
             <Route path="/work-experience" component={WorkExperience} />
             <Route path="/education" component={Education} />
             <Route path="/projects" component={Projects} />
