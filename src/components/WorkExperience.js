@@ -35,6 +35,8 @@ export default class WorkExperience extends Component {
                   "From this domain, I developed endpoints with Flask and Python to handle any logic the recommendation engine will need.",
                 ]}
               />
+            </Col>
+            <Col>
               <Part
                 date="May 2020 - Aug 2020"
                 img="honeybee.png"
