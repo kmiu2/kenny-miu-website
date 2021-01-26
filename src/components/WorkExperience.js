@@ -22,6 +22,20 @@ export default class WorkExperience extends Component {
           <Row noGutters>
             <Col>
               <Part
+                date="Jan 2021 - Apr 2021"
+                img="honeybee.png"
+                link="https://www.honeybeehub.io/"
+                title="DevOps Developer"
+                location="Toronto, Canada"
+                sub="Kubernetes, GCP, Python, Flask"
+                desc={[
+                  "After learning about the structure of Kubernetes and networking, I implemented a new domain to the Honeybee Hub codebase",
+                  <br />,
+                  <br />,
+                  "From this domain, I developed endpoints with Flask and Python to handle any logic the recommendation engine will need.",
+                ]}
+              />
+              <Part
                 date="May 2020 - Aug 2020"
                 img="honeybee.png"
                 link="https://www.honeybeehub.io/"
@@ -36,6 +50,8 @@ export default class WorkExperience extends Component {
                 ]}
               />
             </Col>
+          </Row>
+          <Row noGutters>
             <Col>
               <Part
                 date="Feb 2017 - Nov 2017"
@@ -47,9 +63,6 @@ export default class WorkExperience extends Component {
                 desc="Having experience from previous competitions, I led my team to victory. Despite being the youngest team at the competition, I was still able to guide my team of 9-11 y/o to success, earning nearly all the possible points even available to obtain."
               />
             </Col>
-          </Row>
-          <Row noGutters>
-            <Col></Col>
             <Col>
               <Part
                 date="Sept 2015 - June 2019"
