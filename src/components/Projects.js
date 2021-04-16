@@ -39,7 +39,7 @@ export default class Projects extends Component {
                     date='Sept 2018 - June 2019'
                     img='xcode.png' 
                     link='https://itunes.apple.com/app/id1449888784/' 
-                    title='iOS Developer'
+                    title='iOS App Development'
                     location='St. Augustine Catholic High School' 
                     sub='Swift, Objective-C, XCode, Firebase' 
                     desc={['Starting from zero knowledge of Swift and app development, I self-taught myself everything required to create a successful app.',

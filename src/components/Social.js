@@ -7,11 +7,27 @@ export default class Social extends Component {
     render() {
         return (
             <ButtonToolbar style={{filter: 'grayscale(25%)'}}>
-              <Button variant="outline-link" href="https://www.github.com/kmiu2/">
-                <img src={require('../assets/github.svg')} width="30" height="30" alt=""/>
+              <Button variant="outline-link" href="https://www.github.com/kmiu2/" target={"_blank"}>
+                <img 
+                  src={require('../assets/github.png')} 
+                  style={{
+                    borderRadius: "50%",
+                    width: 30,
+                    height: 30,
+                  }}
+                  alt="github"
+                />
               </Button>
-              <Button variant="outline-link" href="https://www.linkedin.com/in/kennymiu/">
-                <img src={require('../assets/linkedin.svg')} width="30" height="30" alt=""/>
+              <Button variant="outline-link" href="https://www.linkedin.com/in/kennymiu/" target={"_blank"}>
+                <img 
+                  src={require('../assets/linkedin.svg')} 
+                  style={{
+                    borderRadius: "50%",
+                    width: 30,
+                    height: 30,
+                  }}
+                  alt="linkedin"
+                />
               </Button>
             </ButtonToolbar>
         )

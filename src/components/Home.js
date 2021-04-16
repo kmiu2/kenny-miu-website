@@ -31,10 +31,17 @@ export default class Home extends Component {
                 <br />
                 <br />
                 <p>
-                    <Button variant="outline-light" size="lg" href="/KennyMiuResume.pdf" style={{
-                        fontSize: '2rem',
-                        fontWeight: '350'
-                    }}>Resume</Button>
+                    <Button 
+                        variant="outline-light" 
+                        size="lg" 
+                        href="/KennyMiuResume.pdf" 
+                        target={"_blank"}
+                        style={{
+                            fontSize: '2rem',
+                            fontWeight: '350'
+                        }}>
+                        Resume
+                    </Button>
                 </p>
             </Jumbotron>
             </div>

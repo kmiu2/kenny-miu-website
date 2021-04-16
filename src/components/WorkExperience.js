@@ -9,8 +9,7 @@ import Part from "./Part";
 
 const Col = styled(oldCol)`
   background-color: white;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
   border-radius: 5px;
 `;
 
@@ -24,7 +23,7 @@ export default class WorkExperience extends Component {
               <Col>
               <Part
                 date="Jan 2021 - Apr 2021"
-                img="honeybee.png"
+                img="honeybee.svg"
                 link="https://www.honeybeehub.io/"
                 title="DevOps Developer"
                 location="Toronto, Canada"
@@ -41,7 +40,7 @@ export default class WorkExperience extends Component {
             <Col>
               <Part
                 date="Jan 2021 - Apr 2021"
-                img="honeybee.png"
+                img="honeybee.svg"
                 link="https://play.google.com/store/apps/details?id=ca.honeybeehub"
                 title="Mobile Developer"
                 location="Toronto, Canada"
@@ -57,7 +56,7 @@ export default class WorkExperience extends Component {
             <Col>
               <Part
                 date="May 2020 - Aug 2020"
-                img="honeybee.png"
+                img="honeybee.svg"
                 link="https://www.honeybeehub.io/"
                 title="Full Stack Developer"
                 location="Toronto, Canada"

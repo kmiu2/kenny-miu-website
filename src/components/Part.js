@@ -39,7 +39,7 @@ export default class Part extends Component {
                 }}>{this.date}</p>
                 <br />
                 {this.link !== '' ? 
-                    <Link href={this.link}>
+                    <Link href={this.link} target={"_blank"}>
                     <h1 style={{
                         fontSize: 'auto',
                         fontWeight: '350',

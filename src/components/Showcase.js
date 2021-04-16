@@ -44,7 +44,7 @@ export default class Showcase extends Component {
             <Row noGutters>
             <Col>
                 <Part
-                    img='circuit.png'
+                    img='circuit.jpg'
                     link='' 
                     title='Soldering'
                     location='' 
@@ -54,7 +54,7 @@ export default class Showcase extends Component {
             </Col>
             <Col>
                 <Part
-                    img='electroplate.png'
+                    img='electroplate.jpg'
                     link='' 
                     title='Electroplating'
                     location='' 
