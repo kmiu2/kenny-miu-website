@@ -20,7 +20,8 @@ export default class WorkExperience extends Component {
       <div>
         <Container fluid>
           <Row noGutters>
-            <Col>
+            {/*
+              <Col>
               <Part
                 date="Jan 2021 - Apr 2021"
                 img="honeybee.png"
@@ -35,7 +36,24 @@ export default class WorkExperience extends Component {
                   "From this domain, I developed endpoints with Flask and Python to handle any logic the recommendation engine will need.",
                 ]}
               />
-            </Col>
+              </Col>
+            */}
+            <Col>
+              <Part
+                date="Jan 2021 - Apr 2021"
+                img="honeybee.png"
+                link="https://play.google.com/store/apps/details?id=ca.honeybeehub"
+                title="Mobile Developer"
+                location="Toronto, Canada"
+                sub="Flutter, Dart, MongoDB, Google Cloud Platform"
+                desc={[
+                  "With a team of five, we developed many key new features for Honeybee such as a data collection system, a referral system, a recommendation system, and a rewards system. I personally lead our team in creating the profile data collection system by creating the data structures and function definitions as well as coordinating with the UI/UX team.",
+                  <br />,
+                  <br />,
+                  "In addition, the referral system we implemented greatly succeeded as both requests to join studies and study completions rose significantly ever since it was implemented. One of my first projects to be done during this term was to create the domain required for the recommendation endpoints by working with GCP, Kubernetes, Docker and other DevOp tools.",
+                ]}
+              />
+              </Col>
             <Col>
               <Part
                 date="May 2020 - Aug 2020"
