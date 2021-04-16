@@ -8,11 +8,10 @@ import oldCol from 'react-bootstrap/Col'
 import Part from './Part'
 
 const Col = styled(oldCol)`
-    background-color: white; 
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 5px;
-`
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+`;
 
 export default class Projects extends Component {
   render() {
