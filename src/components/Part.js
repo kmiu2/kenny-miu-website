@@ -43,6 +43,7 @@ export default class Part extends Component {
               <h1 style={{
                 fontSize: 'auto',
                 fontWeight: '350',
+                textDecoration: 'underline'
               }}>{this.title}</h1></Link>
             :
             <h1 style={{

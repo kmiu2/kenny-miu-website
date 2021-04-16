@@ -34,7 +34,6 @@ export default class Home extends Component {
           />
           <br />
           <br />
-          <p>
             <Button
               variant="outline-light"
               size="lg"
@@ -45,8 +44,7 @@ export default class Home extends Component {
                 fontWeight: '350'
               }}>
               Resume
-                  </Button>
-          </p>
+            </Button>
         </Jumbotron>
       </div>
     )

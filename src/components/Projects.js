@@ -49,7 +49,6 @@ export default class Projects extends Component {
               />
             </Col>
           </Row>
-          <br />
           <Row noGutters>
             <Col>
               <Part
@@ -78,7 +77,6 @@ export default class Projects extends Component {
               />
             </Col>
           </Row>
-          <br />
         </Container>
       </div>
     )

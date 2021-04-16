@@ -39,7 +39,6 @@ export default class Showcase extends Component {
               />
             </Col>
           </Row>
-          <br />
           <Row noGutters>
             <Col>
               <Part
@@ -62,7 +61,6 @@ export default class Showcase extends Component {
               />
             </Col>
           </Row>
-          <br />
         </Container>
       </div>
     )
