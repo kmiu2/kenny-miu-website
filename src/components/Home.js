@@ -20,14 +20,18 @@ export default class Home extends Component {
                 <br />
                 <h3 style={{
                     fontSize: '2rem'
-                }}>Nanotechnology Engineer</h3>
+                }}>Software Developer, Nanotechnology Engineer</h3>
                 <br />
-                <h3 style={{
-                    fontStyle: 'italic',
-                    fontFamily: 'Times'
-                }}>3D Designer, Robotics Adventurist</h3>
                 <br />
-                <img src={require('../assets/me.jpg')} width="65%" alt="" style={{borderRadius: '20px'}}/>
+                <img 
+                    src={require('../assets/me.jpg')}
+                    alt="" 
+                    style={{
+                        borderRadius: '20px',
+                        minWidth: '50%',
+                        maxWidth: 250,
+                    }}
+                />
                 <br />
                 <br />
                 <p>
