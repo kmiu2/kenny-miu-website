@@ -17,7 +17,6 @@ class App extends React.Component {
     return (
       <div>
         <Home />
-
         <div className="px-3">
         <Navbar bg="dark" variant="dark" style={{
           padding: '10px',
