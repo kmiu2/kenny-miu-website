@@ -9,7 +9,6 @@ export default class Home extends Component {
         <Jumbotron style={{
           backgroundColor: 'transparent',
           color: '#fff',
-          fontFamily: 'Helvetica',
           textAlign: 'center'
         }}>
           <h1 style={{
@@ -25,7 +24,7 @@ export default class Home extends Component {
           <br />
           <img
             src={require('../assets/me.jpg')}
-            alt=""
+            alt="me"
             style={{
               borderRadius: '20px',
               minWidth: '50%',
@@ -35,14 +34,10 @@ export default class Home extends Component {
           <br />
           <br />
             <Button
-              variant="outline-light"
-              size="lg"
+              className="home-button"
               href="/KennyMiuResume.pdf"
               target={"_blank"}
-              style={{
-                fontSize: '2rem',
-                fontWeight: '350'
-              }}>
+            >
               Resume
             </Button>
         </Jumbotron>

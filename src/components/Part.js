@@ -1,22 +1,14 @@
 import React, { Component } from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Image from 'react-bootstrap/Image'
-import styled from 'styled-components'
 import NavLink from 'react-bootstrap/NavLink';
-
-const Link = styled(NavLink)`     
-    background: transparent;
-    color: inherit;
-    &:hover {
-        color: #8eb0e8;
-    }
-`
+import { Button } from 'react-bootstrap';
 
 export default class Part extends Component {
   constructor(props) {
     super(props)
-
     this.link = this.props.link
+    this.linkText = this.props.linkText
     this.img = this.props.img
     this.title = this.props.title
     this.location = this.props.location
@@ -29,7 +21,6 @@ export default class Part extends Component {
       <div className="container">
         <Jumbotron style={{
           backgroundColor: 'transparent',
-          fontFamily: 'Helvetica',
           textAlign: 'center',
           height: '100%'
         }}>
@@ -38,29 +29,50 @@ export default class Part extends Component {
             fontStyle: 'italic'
           }}>{this.date}</p>
           <br />
-          {this.link !== '' ?
-            <Link href={this.link} target={"_blank"}>
+          {this.link != null ?
+            <NavLink 
+              className="part-link"
+              href={this.link} 
+              target={"_blank"}
+            >
               <h1 style={{
                 fontSize: 'auto',
                 fontWeight: '350',
-                textDecoration: 'underline'
-              }}>{this.title}</h1></Link>
+              }}>{this.title}</h1>
+            </NavLink>
             :
             <h1 style={{
               fontSize: 'auto',
               fontWeight: '350',
             }}>{this.title}</h1>}
           <br />
-          {this.location !== "" ? <h3>{this.location}</h3> : null}
-          {this.img !== undefined ? <Image src={require(`../assets/${this.img}`)} rounded fluid width="60%" /> : null}
+          {this.location != null ? <h3>{this.location}</h3> : null}
+          {this.img != null ?
+            <div style={{padding: 15}}>
+              <Image 
+                src={require(`../assets/${this.img}`)} 
+                rounded 
+                width="45%"
+              />
+            </div> : null}
           <br />
           <br />
-          {this.sub !== "" ? <h4><b>{this.sub}</b></h4> : null}
+          {this.sub != null ? <h4 style={{fontWeight: 'bold'}}>{this.sub}</h4> : null}
           <br />
           <p style={{
             fontSize: '1.5rem',
             fontWeight: '200',
+            lineHeight: '165%'
           }}>{this.desc}</p>
+          <br />
+          {this.link != null ? 
+            <Button
+              className="part-button"
+              href={this.link} 
+              target={"_blank"}
+            >
+              {this.linkText ?? "Website"}
+            </Button> : null}
         </Jumbotron>
       </div>
     )

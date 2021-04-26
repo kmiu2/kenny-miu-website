@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: local('Montserrat-Regular'), url(./Montserrat-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: local('Montserrat-SemiBold'), url(./Montserrat-SemiBold.woff) format('woff');
+  font-weight: bold;
+}
+
+html {
+  background-color: #0d2338;
+}
+
+body {
+  background: linear-gradient(#0b4987, #092847);
+  background-size: cover;
+  font-family: 'Montserrat-Regular';
+}
+
+.home-button {
+  border: 5px solid white;
+  background-color: transparent;
+  border-radius: 0;
+  min-width: 225px;
+  width: 20%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.home-button:hover {
+  color: #40bdf7;
+  background-color: transparent;
+  border-color: #40bdf7
+}
+
+.col-left {
+  background-color: white;
+  border-right: 2px solid #c9c9c9;
+  border-bottom: 2px solid #c9c9c9;
+}
+.col-right {
+  background-color: white;
+  border-bottom: 2px solid #c9c9c9;
+}
+.col-left-bottom {
+  background-color: white;
+  border-right: 2px solid #c9c9c9;
+}
+.col-right-bottom {
+  background-color: white;
+}
+
+.part-link {
+  color: inherit;
+}
+.part-link:hover {
+  color: #40bdf7;
+}
+
+.part-button {
+  color: black;
+  border: 3px solid black;
+  background-color: transparent;
+  border-radius: 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.part-button:hover {
+  color: #40bdf7;
+  background-color: transparent;
+  border-color: #40bdf7
+}
+
+.contact-left-col {
+  text-align: center;
+  font-weight: bold;
+  color: #636363;
+  text-transform: uppercase;
+  padding: 25px;
+}
+.contact-right-col {
+  color: #787878;
+  padding: 25px;
+}
