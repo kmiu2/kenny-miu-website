@@ -1,51 +1,58 @@
-import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React from 'react'
 import Social from './Social';
+import { Col, Container, Row } from 'react-bootstrap'
+import { useMediaQuery } from 'react-responsive'
 
-export default class Contact extends Component {
-  render() {
-    const info = [
-      {
-        title: "Location",
-        value: "Toronto, Canada",
-      },
-      {
-        title: "Phone",
-        value: "+1 (647) 863 1337",
-      },
-      {
-        title: "Email",
-        value: "kennymiu2@gmail.com",
-      },
-      {
-        title: "Social",
-        value: <Social fill="#787878"/>,
-      },
-    ];
+export default function Contact(props){
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
-    const rows = []
-    for (var i = 0; i < info.length; i++){
-      rows.push(
-        <Row noGutters>
-          <Col xs={3} className="contact-left-col">
-            {info[i].title}
-          </Col>
-          <Col xs={9} className="contact-right-col">
-            {info[i].value}
-          </Col>
-        </Row>
-      )
+  const info = [
+    {
+      title: "Location",
+      value: "Toronto, Canada",
+    },
+    {
+      title: "Phone",
+      value: "+1 (647) 863 1337",
+    },
+    {
+      title: "Email",
+      value: "kennymiu2@gmail.com",
+    },
+    {
+      title: "Social",
+      value: <Social fill="#787878"/>,
+    },
+  ];
 
-      if(i !== info.length - 1)
-        rows.push(<hr />)
-    }
-
-    return (
-      <div style={{padding: 30, backgroundColor: "#e0e0e0"}}>
-        <Container fluid="xl">
-          {rows}
-        </Container>
-      </div>
+  const rows = []
+  for (let i = 0; i < info.length; i++){
+    rows.push(
+      <Row key={i + "row"} noGutters>
+        <Col xs={isTabletOrMobile ? 4 : 2} className="contact-left-col">
+          {info[i].title}
+        </Col>
+        <Col className="contact-right-col">
+          {info[i].value}
+        </Col>
+      </Row>
     )
+
+    if(i !== info.length - 1)
+      rows.push(<hr key={i + "hr"}/>)
   }
+
+  return (
+    <div 
+      style={{
+        padding: isTabletOrMobile 
+          ? "30px 0"
+          : "30px", 
+      backgroundColor: "#e0e0e0"}}
+    >
+      <Container fluid="xl">
+        {rows}
+      </Container>
+    </div>
+  );
 }

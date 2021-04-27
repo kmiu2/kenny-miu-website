@@ -35,6 +35,10 @@ body {
   border-color: #40bdf7
 }
 
+.home-nav {
+ background-color: #1b3146;
+}
+
 .col-left {
   background-color: white;
   border-right: 2px solid #c9c9c9;
@@ -79,9 +83,9 @@ body {
   font-weight: bold;
   color: #636363;
   text-transform: uppercase;
-  padding: 25px;
+  padding: 20px;
 }
 .contact-right-col {
   color: #787878;
-  padding: 25px;
+  padding: 20px;
 }
