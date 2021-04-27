@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Sidebar.css';
 import Social from './Social';
 
 export default function Sidebar(props) {
