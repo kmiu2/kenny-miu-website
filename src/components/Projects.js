@@ -5,16 +5,7 @@ import Section from './Section'
 export default function Projects(props) {
   const parts = [
     {
-      img: 'react.svg',
-      title: 'React Website',
-      sub: 'ReactJS, Bootstrap, npm, CSS, HTML',
-      desc: ['Using React, I was able to create several quick and responsive SPAs such as this website.',
-        <br />,
-        <br />,
-        'By using React Router and the SPA architecture, this website is able to instantly switch between subpages.'
-      ]
-    },
-    {
+      spotlight: true,
       date: 'Sept 2018 - June 2019',
       img: 'xcode.png',
       link: 'https://itunes.apple.com/app/id1449888784/',
@@ -25,6 +16,16 @@ export default function Projects(props) {
         <br />,
         <br />,
         'In order to properly support the entire school, we had to ensure both the Android and iOS apps have the same UI and functionality. Using the Agile approach to development, I was able to coordinate with the team and our principal to ensure the app was a success. Through mediums like Slack and emailing the student body, our team cooperated and fulfilled the requests of our student body.'
+      ]
+    },
+    {
+      img: 'react.svg',
+      title: 'React Website',
+      sub: 'ReactJS, Bootstrap, npm, CSS, HTML',
+      desc: ['Using React, I was able to create several quick and responsive SPAs such as this website.',
+        <br />,
+        <br />,
+        'By using React Router and the SPA architecture, this website is able to instantly switch between subpages.'
       ]
     },
     {

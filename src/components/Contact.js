@@ -14,10 +14,12 @@ export default function Contact(props){
     {
       title: "Phone",
       value: "+1 (647) 863 1337",
+      link: "tel: +1 (647) 863 1337"
     },
     {
       title: "Email",
       value: "kennymiu2@gmail.com",
+      link: "mailto: kennymiu2@gmail.com"
     },
     {
       title: "Social",
@@ -33,7 +35,13 @@ export default function Contact(props){
           {info[i].title}
         </Col>
         <Col className="contact-right-col">
-          {info[i].value}
+          {info[i].link != null
+            ? <a
+                className="contact-link"
+                href={info[i].link}
+              >{info[i].value}</a>
+            : info[i].value
+          }
         </Col>
       </Row>
     )

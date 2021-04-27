@@ -42,7 +42,10 @@ export default function Part(props) {
             <Image
               src={require(`../assets/${img}`)}
               rounded
-              width="45%"
+              style={{
+                minWidth: '50%',
+                maxWidth: 250,
+              }}
             />
           </div> : null}
         <br />
