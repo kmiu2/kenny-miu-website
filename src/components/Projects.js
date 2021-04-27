@@ -21,7 +21,7 @@ export default function Projects(props) {
     {
       img: 'react.svg',
       title: 'React Website',
-      link: 'https://github.com/kmiu2',
+      link: 'https://github.com/kmiu2/kenny-miu-website',
       sub: 'ReactJS, Bootstrap, npm, CSS, HTML',
       desc: ['Using React, I was able to create several quick and responsive SPAs such as this website.',
         <br />,
