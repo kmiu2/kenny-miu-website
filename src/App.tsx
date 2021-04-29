@@ -1,16 +1,15 @@
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { useMediaQuery } from 'react-responsive';
+import { NavLink, Route, Switch, useLocation } from 'react-router-dom';
 import Contact from './components/Contact';
-import Education from './components/Education'
-import Home from './components/Home'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import Projects from './components/Projects'
-import React from 'react';
+import Education from './components/Education';
+import Home from './components/Home';
+import Projects from './components/Projects';
 import Showcase from './components/Showcase';
 import Sidebar from './components/Sidebar';
-import Social from './components/Social'
-import WorkExperience from './components/WorkExperience'
-import { NavLink, Route, Switch, useLocation } from 'react-router-dom'
-import { useMediaQuery } from 'react-responsive';
+import Social from './components/Social';
+import WorkExperience from './components/WorkExperience';
 
 export default function App(props: any) {
   let location = useLocation();

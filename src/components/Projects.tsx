@@ -1,13 +1,16 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Section from './Section'
+import Container from 'react-bootstrap/Container';
+import reactImg from "../assets/react.svg";
+import rpiImg from "../assets/rpi.png";
+import swImg from "../assets/sw.png";
+import xcodeImg from "../assets/xcode.png";
+import Section from './Section';
 
 export default function Projects(props: any) {
   const parts = [
     {
       spotlight: true,
       date: 'Sept 2018 - June 2019',
-      img: 'xcode.png',
+      img: xcodeImg,
       link: 'https://itunes.apple.com/app/id1449888784/',
       title: 'iOS App Development',
       location: 'St. Augustine Catholic High School',
@@ -19,9 +22,10 @@ export default function Projects(props: any) {
       ]
     },
     {
-      img: 'react.svg',
+      img: reactImg,
       title: 'React Website',
       link: 'https://github.com/kmiu2/kenny-miu-website',
+      linkText: "View Code",
       sub: 'ReactJS, Bootstrap, npm, CSS, HTML',
       desc: ['Using React, I was able to create several quick and responsive SPAs such as this website.',
         <br />,
@@ -30,7 +34,7 @@ export default function Projects(props: any) {
       ]
     },
     {
-      img: 'sw.png',
+      img: swImg,
       title: 'SolidWorks Projects',
       sub: 'SolidWorks',
       desc: ['By using SolidWorks, a 3D Modelling Software, I created a variety of parts and assemblies. From designing simple chairs to fully functioning soapbox cars, I worked through a variety of challenges and became proficient with 3D modelling software.',
@@ -40,7 +44,7 @@ export default function Projects(props: any) {
       ]
     },
     {
-      img: 'rpi.png',
+      img: rpiImg,
       title: 'Raspberry Pi Projects',
       sub: 'Raspberry Pi 3',
       desc: ['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to practical applications',

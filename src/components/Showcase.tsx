@@ -1,11 +1,14 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Section from './Section'
+import Container from 'react-bootstrap/Container';
+import carImg from "../assets/car.png";
+import circuitImg from "../assets/circuit.jpg";
+import electroplateImg from "../assets/electroplate.jpg";
+import trampolineImg from "../assets/trampoline.png";
+import Section from './Section';
 
 export default function Showcase(props: any) {
   const parts = [
     {
-      img: 'car.png',
+      img: carImg,
       link: '/car.zip',
       linkText: "Download",
       title: 'Soapbox Car',
@@ -15,7 +18,7 @@ export default function Showcase(props: any) {
       ]
     },
     {
-      img: 'trampoline.png',
+      img: trampolineImg,
       link: '/trampoline.zip',
       title: 'Trampoline',
       sub: 'SolidWorks',
@@ -24,14 +27,14 @@ export default function Showcase(props: any) {
       ]
     },
     {
-      img: 'circuit.jpg',
+      img: circuitImg,
       title: 'Soldering',
       desc: [
         'Using the few parts given, I soldered these two LEDs, resistor and switch in series.'
       ]
     },
     {
-      img: 'electroplate.jpg',
+      img: electroplateImg,
       title: 'Electroplating',
       desc: [
         'Using a copper (II) nitrate solution and galvanized steel, I plated this Pikachu design onto the galvanized steel plate with copper.'

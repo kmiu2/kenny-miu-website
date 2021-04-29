@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import React, { useState, useEffect } from 'react';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import Social from './Social';
 

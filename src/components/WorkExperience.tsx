@@ -1,5 +1,8 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import firstRoboticsImg from "../assets/first_robotics.jpg";
+import honeybeeLogoImg from "../assets/honeybee.svg";
+import markhamImg from "../assets/markham.png";
 import Section from "./Section";
 
 export default function WorkExperience(props: any) {
@@ -7,7 +10,7 @@ export default function WorkExperience(props: any) {
     // {
     //   spotlight: true,
     //   date: "Jan 2021 - Apr 2021",
-    //   img: "honeybee.svg",
+    //   img: {honeybeeLogo},
     //   link: "https://www.honeybeehub.io/",
     //   title: "DevOps Developer",
     //   location: "Toronto, Canada",
@@ -21,7 +24,7 @@ export default function WorkExperience(props: any) {
     // },
     {
       date: "Jan 2021 - Apr 2021",
-      img: "honeybee.svg",
+      img: honeybeeLogoImg,
       link: "https://play.google.com/store/apps/details?id=ca.honeybeehub",
       title: "Mobile Developer",
       location: "Toronto, Canada",
@@ -35,7 +38,7 @@ export default function WorkExperience(props: any) {
     },
     {
       date: "May 2020 - Aug 2020",
-      img: "honeybee.svg",
+      img: honeybeeLogoImg,
       link: "https://www.honeybeehub.io/",
       title: "Full Stack Developer",
       location: "Toronto, Canada",
@@ -49,7 +52,7 @@ export default function WorkExperience(props: any) {
     },
     {
       date: "Feb 2017 - Nov 2017",
-      img: "first_robotics.jpg",
+      img: firstRoboticsImg,
       link: "https://www.firstroboticscanada.org/",
       title: "FIRST Robotics Mentor",
       location: "Toronto, Canada",
@@ -58,7 +61,7 @@ export default function WorkExperience(props: any) {
     },
     {
       date: "Sept 2015 - June 2019",
-      img: "markham.png",
+      img: markhamImg,
       link: "https://www.markham.ca",
       title: "Computer Instructor",
       location: "Markham, Canada",

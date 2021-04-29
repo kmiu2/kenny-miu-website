@@ -1,7 +1,6 @@
-import React from 'react'
+import { Col, Container, Row } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
 import Social from './Social';
-import { Col, Container, Row } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
 
 export default function Contact(props: any){
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })

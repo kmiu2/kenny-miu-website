@@ -1,9 +1,8 @@
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-import Part from './Part'
-import React from 'react'
 import Row from 'react-bootstrap/Row'
 import { useMediaQuery } from 'react-responsive'
+import Part from './Part'
 
 export default function Section(props: any) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })

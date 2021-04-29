@@ -1,8 +1,7 @@
-import React from 'react'
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Image from 'react-bootstrap/Image'
-import NavLink from 'react-bootstrap/NavLink';
 import { Button } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import NavLink from 'react-bootstrap/NavLink';
 
 export default function Part(props: any) {
   const { link, linkText, img, title, location, sub, desc, date } = props;
@@ -40,11 +39,12 @@ export default function Part(props: any) {
         {img != null ?
           <div style={{ padding: 15 }}>
             <Image
-              src={require(`../assets/${img}`)}
+              src={img}
               rounded
+              alt={title}
               style={{
                 minWidth: '50%',
-                maxWidth: 250,
+                maxWidth: 225,
               }}
             />
           </div> : null}

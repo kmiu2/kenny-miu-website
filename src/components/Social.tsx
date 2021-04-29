@@ -1,4 +1,3 @@
-import React from 'react'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Button from 'react-bootstrap/Button'
 import { ReactComponent as GitHubIcon } from '../assets/github.svg';
