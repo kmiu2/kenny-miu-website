@@ -12,7 +12,7 @@ import WorkExperience from './components/WorkExperience'
 import { NavLink, Route, Switch, useLocation } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive';
 
-export default function App() {
+export default function App(props: any) {
   let location = useLocation();
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 

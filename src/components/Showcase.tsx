@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Section from './Section'
 
-export default function Showcase(props) {
+export default function Showcase(props: any) {
   const parts = [
     {
       img: 'car.png',

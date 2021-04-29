@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Section from './Section'
 
-export default function Projects(props) {
+export default function Projects(props: any) {
   const parts = [
     {
       spotlight: true,

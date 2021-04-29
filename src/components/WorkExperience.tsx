@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Section from "./Section";
 
-export default function WorkExperience(props) {
+export default function WorkExperience(props: any) {
   const parts = [
     // {
     //   spotlight: true,

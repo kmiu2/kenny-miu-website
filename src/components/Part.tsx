@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image'
 import NavLink from 'react-bootstrap/NavLink';
 import { Button } from 'react-bootstrap';
 
-export default function Part(props) {
+export default function Part(props: any) {
   const { link, linkText, img, title, location, sub, desc, date } = props;
 
   return (
@@ -27,13 +27,13 @@ export default function Part(props) {
           >
             <h1 style={{
               fontSize: '2.1rem',
-              fontWeight: '350',
+              fontWeight: 350,
             }}>{title}</h1>
           </NavLink>
           :
           <h1 style={{
             fontSize: '2.1rem',
-            fontWeight: '350',
+            fontWeight: 350,
           }}>{title}</h1>}
         <br />
         {location != null ? <h3>{location}</h3> : null}
@@ -54,7 +54,7 @@ export default function Part(props) {
         <br />
         <p style={{
           fontSize: '1.5rem',
-          fontWeight: '200',
+          fontWeight: 200,
           lineHeight: '165%'
         }}>{desc}</p>
         <br />

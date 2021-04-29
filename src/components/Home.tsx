@@ -3,7 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Button from 'react-bootstrap/Button'
 import { useMediaQuery } from 'react-responsive';
 
-export default function Home(props) {
+export default function Home(props: any) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   return (
@@ -15,7 +15,7 @@ export default function Home(props) {
       }}>
         <h1 style={{
           fontSize: isTabletOrMobile ? '3.7rem' :'4.5rem',
-          fontWeight: '900',
+          fontWeight: 900,
           textTransform: 'uppercase'
         }}>Kenny Miu</h1>
         <br />

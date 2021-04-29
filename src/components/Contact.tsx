@@ -3,7 +3,7 @@ import Social from './Social';
 import { Col, Container, Row } from 'react-bootstrap'
 import { useMediaQuery } from 'react-responsive'
 
-export default function Contact(props){
+export default function Contact(props: any){
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const info = [

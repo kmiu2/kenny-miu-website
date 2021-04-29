@@ -5,7 +5,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import { useMediaQuery } from 'react-responsive'
 
-export default function Section(props) {
+export default function Section(props: any) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const parts = props.parts;

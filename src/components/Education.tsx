@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Section from './Section'
 
-export default function Education(props) {
+export default function Education(props: any) {
   const parts = [
     {
       date: "Sept 2019 - April 2024",

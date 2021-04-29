@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Social from './Social';
 
-export default function Sidebar(props) {
+export default function Sidebar(props: any) {
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Sidebar(props) {
       <Button 
         className="menu-button"
         onClick={showSidebar} 
-        style={{boxShadow: shouldShowShadow ? "3px 3px 3px 3px #ccc" : null }}
+        style={{boxShadow: shouldShowShadow ? "3px 3px 3px 3px #ccc" : undefined }}
       >
         <AiOutlineMenu style={{verticalAlign: "text-top", paddingTop: "3px"}}/> Menu
       </Button>
