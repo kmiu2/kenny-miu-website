@@ -25,7 +25,7 @@ export default function Contact(props: any) {
       value: <Social filter="invert(50%) sepia(3%) saturate(8%) hue-rotate(332deg) brightness(92%) contrast(82%)" />,
     },
   ];
-  // NOTE: Use https://codepen.io/sosuke/pen/Pjoqqp to get the filter of color #787878
+  // NOTE: Use https://codepen.io/sosuke/pen/Pjoqqp to get the filter of color #787878 
 
   const rows = []
   for (let i = 0; i < info.length; i++) {
