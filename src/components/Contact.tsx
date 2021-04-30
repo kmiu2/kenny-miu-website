@@ -1,9 +1,9 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import { useMediaQuery } from 'react-responsive';
+import useResponsive from './helpers';
 import Social from './social';
 
 export default function Contact(props: any) {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const { isMobile } = useResponsive();
 
   const info = [
     {
@@ -31,7 +31,7 @@ export default function Contact(props: any) {
   for (let i = 0; i < info.length; i++) {
     rows.push(
       <Row key={i + "row"} noGutters>
-        <Col xs={isTabletOrMobile ? 4 : 2} className="contact-left-col">
+        <Col xs={isMobile ? 4 : 2} className="contact-left-col">
           {info[i].title}
         </Col>
         <Col className="contact-right-col">
@@ -52,7 +52,7 @@ export default function Contact(props: any) {
   return (
     <div
       style={{
-        padding: isTabletOrMobile ? "30px 0" : "30px",
+        padding: isMobile ? "30px 0" : "30px",
         backgroundColor: "#e0e0e0"
       }}
     >

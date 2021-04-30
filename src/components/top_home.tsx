@@ -4,12 +4,12 @@ import Image from 'react-bootstrap/Image';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useMediaQuery } from 'react-responsive';
+import useResponsive from "./helpers";
 import Sidebar from './sidebar';
 import Social from './social';
 
 export default function TopHome(props: any) {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const { isMobile } = useResponsive();
 
   return (
     <div>
@@ -20,13 +20,13 @@ export default function TopHome(props: any) {
           textAlign: 'center'
         }}>
           <h1 style={{
-            fontSize: isTabletOrMobile ? '3.7rem' : '4.5rem',
+            fontSize: isMobile ? '3.7rem' : '4.5rem',
             fontWeight: 900,
             textTransform: 'uppercase'
           }}>Kenny Miu</h1>
           <br />
           <h3 style={{
-            fontSize: isTabletOrMobile ? '1.7rem' : '2rem'
+            fontSize: isMobile ? '1.7rem' : '2rem'
           }}>Software Developer, Nanotechnology Engineer</h3>
           <br />
           <br />
@@ -51,7 +51,7 @@ export default function TopHome(props: any) {
         </Jumbotron>
       </div>
 
-      {isTabletOrMobile
+      {isMobile
         ? <Sidebar />
         : <div style={{ padding: "0 7.5%" }}>
           <Navbar variant="dark" expand="lg" className="home-nav">
