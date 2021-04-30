@@ -22,9 +22,10 @@ export default function Contact(props: any) {
     },
     {
       title: "Social",
-      value: <Social fill="#787878" />,
+      value: <Social filter="invert(50%) sepia(3%) saturate(8%) hue-rotate(332deg) brightness(92%) contrast(82%)" />,
     },
   ];
+  // Note: Use https://codepen.io/sosuke/pen/Pjoqqp to get the filter of color #787878
 
   const rows = []
   for (let i = 0; i < info.length; i++) {
@@ -44,7 +45,6 @@ export default function Contact(props: any) {
         </Col>
       </Row>
     )
-
     if (i !== info.length - 1)
       rows.push(<hr key={i + "hr"} />)
   }
@@ -52,9 +52,7 @@ export default function Contact(props: any) {
   return (
     <div
       style={{
-        padding: isTabletOrMobile
-          ? "30px 0"
-          : "30px",
+        padding: isTabletOrMobile ? "30px 0" : "30px",
         backgroundColor: "#e0e0e0"
       }}
     >

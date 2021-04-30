@@ -4,7 +4,7 @@ import Contact from '../src/components/contact';
 import TopHome from '../src/components/top_home';
 import WorkExperience from '../src/components/work_experience';
 
-export default function App(props: any) {
+export default function WorkExperiencePage(props: any) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   return (

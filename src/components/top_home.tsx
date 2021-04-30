@@ -1,11 +1,10 @@
 import Link from "next/link";
 import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-// import meImage from '../assets/me.jpg';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useMediaQuery } from 'react-responsive';
-import Contact from './contact';
 import Sidebar from './sidebar';
 import Social from './social';
 
@@ -31,8 +30,8 @@ export default function TopHome(props: any) {
           }}>Software Developer, Nanotechnology Engineer</h3>
           <br />
           <br />
-          <img
-            // src={meImage}
+          <Image
+            src="/images/me.jpg"
             alt="me"
             style={{
               borderRadius: '20px',
@@ -52,38 +51,30 @@ export default function TopHome(props: any) {
         </Jumbotron>
       </div>
 
-      {isTabletOrMobile 
+      {isTabletOrMobile
         ? <Sidebar />
         : <div style={{ padding: "0 7.5%" }}>
           <Navbar variant="dark" expand="lg" className="home-nav">
             <Nav>
               <Nav.Link>
-                <div className="nav-link">
-                  <Link href="/work_experience">
-                    Work Experience
-                  </Link>
-                </div>
+                <Link href="/work_experience">
+                  <a className="nav-link">Work Experience</a>
+                </Link>
               </Nav.Link>
               <Nav.Link>
-                <div className="nav-link">
-                  <Link href="/projects">
-                    Projects
+                <Link href="/projects">
+                  <a className="nav-link">Projects</a>
                 </Link>
-                </div>
               </Nav.Link>
               <Nav.Link>
-                <div className="nav-link">
-                  <Link href="/education">
-                    Education
+                <Link href="/education">
+                  <a className="nav-link">Education</a>
                 </Link>
-                </div>
               </Nav.Link>
               <Nav.Link>
-                <div className="nav-link">
-                  <Link href="/showcase">
-                    Showcase
+                <Link href="/showcase">
+                  <a className="nav-link">Showcase</a>
                 </Link>
-                </div>
               </Nav.Link>
             </Nav>
             <Navbar.Collapse className="justify-content-end">

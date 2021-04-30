@@ -1,13 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import Section from './section';
-// import uwLogoImg from "../assets/uw_icon.svg";
-// import staLogoImg from "../assets/sta_icon.svg";
 
 export default function Education(props: any) {
   const parts = [
     {
       date: "Sept 2019 - April 2024",
-      // img: uwLogoImg,
+      img: "uw_icon.svg",
       link: "https://uwaterloo.ca/",
       title: ['Nano', <wbr />, 'technology Engineer Student'],
       location: "University of Waterloo",
@@ -20,7 +18,7 @@ export default function Education(props: any) {
     },
     {
       date: "Sept 2015 - June 2019",
-      // img: staLogoImg,
+      img: "sta_icon.svg",
       link: 'https://www.ycdsb.ca/stau/',
       title: 'ICT SHSM Graduate',
       location: 'St. Augustine Catholic High School',

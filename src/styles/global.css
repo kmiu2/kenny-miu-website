@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: local('Montserrat-Regular'), url(../public/Montserrat-Regular.woff) format('woff');
+  src: local('Montserrat-Regular'), url(./Montserrat-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: local('Montserrat-SemiBold'), url(../public/Montserrat-SemiBold.woff) format('woff');
+  src: local('Montserrat-SemiBold'), url(./Montserrat-SemiBold.woff) format('woff');
   font-weight: bold;
 }
 
@@ -29,6 +29,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .home-button:hover {
   color: #40bdf7;
   background-color: transparent;
@@ -36,7 +37,7 @@ body {
 }
 
 .home-nav {
- background-color: #1b3146;
+  background-color: #1b3146;
 }
 
 .col-left {
@@ -44,14 +45,17 @@ body {
   border-right: 2px solid #c9c9c9;
   border-bottom: 2px solid #c9c9c9;
 }
+
 .col-right {
   background-color: white;
   border-bottom: 2px solid #c9c9c9;
 }
+
 .col-left-bottom {
   background-color: white;
   border-right: 2px solid #c9c9c9;
 }
+
 .col-right-bottom {
   background-color: white;
 }
@@ -59,6 +63,7 @@ body {
 .part-link {
   color: inherit;
 }
+
 .part-link:hover {
   color: #40bdf7;
 }
@@ -72,6 +77,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .part-button:hover {
   color: #40bdf7;
   background-color: transparent;
@@ -85,10 +91,12 @@ body {
   text-transform: uppercase;
   padding: 20px;
 }
+
 .contact-right-col {
   color: #787878;
   padding: 20px;
 }
+
 .contact-link {
   color: #787878;
   text-decoration: underline;
@@ -119,6 +127,7 @@ body {
   opacity: 0%;
   transition: 850ms;
 }
+
 .nav-overlay.active {
   opacity: 75%;
   transition: 350ms;
@@ -134,6 +143,7 @@ body {
   left: -100%;
   transition: 850ms;
 }
+
 .nav-menu.active {
   left: 0;
   transition: 350ms;
@@ -146,6 +156,7 @@ body {
   list-style: none;
   height: 60px;
 }
+
 .nav-text a {
   text-decoration: none;
   color: #f5f5f5;
@@ -157,6 +168,7 @@ body {
   align-items: center;
   border-radius: 0px;
 }
+
 .nav-text a:hover {
   color: black;
   background-color: white;

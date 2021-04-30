@@ -48,7 +48,7 @@ export default function Sidebar(props: any) {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <div>
+    <div style={{position: "absolute", zIndex: 1}}>
       <Button 
         className="menu-button"
         onClick={showSidebar} 
@@ -69,9 +69,6 @@ export default function Sidebar(props: any) {
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className="nav-text">
-                {/* <NavLink to={item.path}>
-                  {item.title}
-                </NavLink> */}
                 <Link href={item.path}>
                   {item.title}
                 </Link>

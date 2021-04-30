@@ -39,7 +39,7 @@ export default function Part(props: any) {
         {img != null ?
           <div style={{ padding: 15 }}>
             <Image
-              src={img}
+              src={`/images/${img}`}
               rounded
               alt={title}
               style={{
