@@ -1,6 +1,6 @@
 # My Personal Website
 This is my personal website that I wrote using ReactJS. It showcases my work experiences and projects that I have worked.
-It deploys with Netlify so that I can easily push to GitHub to update my wesite.
+It deploys with Netlify so that I can easily push to GitHub to update my website.
 
 ## My Contacts
 You can contact me at:
