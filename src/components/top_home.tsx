@@ -9,7 +9,7 @@ import Sidebar from './sidebar';
 import Social from './social';
 
 export default function TopHome(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useResponsive(1224);
 
   return (
     <div>

@@ -1,16 +1,16 @@
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import { useMediaQuery } from 'react-responsive'
+import useResponsive from './helpers'
 import Part from './part'
 
 export default function Section(props: any) {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isMobile = useResponsive(1224);
 
   const parts = props.parts;
   const rows = []
 
-  if (isTabletOrMobile) {
+  if (isMobile) {
     for (let i = 0; i < parts.length; i++) {
       rows.push(
         <Row key={i + "row"} noGutters>

@@ -5,7 +5,7 @@ import Projects from '../src/components/projects';
 import TopHome from '../src/components/top_home';
 
 export default function ProjectsPage(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useResponsive(1224);
 
   return (
     <div>

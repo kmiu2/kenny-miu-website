@@ -3,7 +3,7 @@ import useResponsive from './helpers';
 import Social from './social';
 
 export default function Contact(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useResponsive(1224);
 
   const info = [
     {

@@ -5,7 +5,7 @@ import Showcase from '../src/components/showcase';
 import TopHome from '../src/components/top_home';
 
 export default function ShowcasePage(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useResponsive(1224);
 
   return (
     <div>

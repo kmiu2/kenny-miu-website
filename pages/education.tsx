@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Contact from '../src/components/contact';
 import Education from '../src/components/education';
-import useResponsive from '../src/components/helpers';
+import useMediaQuery from '../src/components/helpers';
 import TopHome from '../src/components/top_home';
 
 export default function EducationPage(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useMediaQuery(1224);
 
   return (
     <div>

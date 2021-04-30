@@ -5,7 +5,7 @@ import TopHome from '../src/components/top_home';
 import WorkExperience from '../src/components/work_experience';
 
 export default function WorkExperiencePage(props: any) {
-  const { isMobile } = useResponsive();
+  const isMobile = useResponsive(1224);
 
   return (
     <div>
