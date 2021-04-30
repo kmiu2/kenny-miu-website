@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { NavLink } from 'react-router-dom';
-import Social from './Social';
+import Link from "next/link"
+import Social from './social';
 
 export default function Sidebar(props: any) {
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
@@ -69,9 +69,12 @@ export default function Sidebar(props: any) {
           {SidebarData.map((item, index) => {
             return (
               <li key={index} className="nav-text">
-                <NavLink to={item.path}>
+                {/* <NavLink to={item.path}>
                   {item.title}
-                </NavLink>
+                </NavLink> */}
+                <Link href={item.path}>
+                  {item.title}
+                </Link>
               </li>
             );
           })}

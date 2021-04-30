@@ -1,8 +1,8 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import { useMediaQuery } from 'react-responsive';
-import Social from './Social';
+import Social from './social';
 
-export default function Contact(props: any){
+export default function Contact(props: any) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const info = [
@@ -22,12 +22,12 @@ export default function Contact(props: any){
     },
     {
       title: "Social",
-      value: <Social fill="#787878"/>,
+      value: <Social fill="#787878" />,
     },
   ];
 
   const rows = []
-  for (let i = 0; i < info.length; i++){
+  for (let i = 0; i < info.length; i++) {
     rows.push(
       <Row key={i + "row"} noGutters>
         <Col xs={isTabletOrMobile ? 4 : 2} className="contact-left-col">
@@ -36,26 +36,27 @@ export default function Contact(props: any){
         <Col className="contact-right-col">
           {info[i].link != null
             ? <a
-                className="contact-link"
-                href={info[i].link}
-              >{info[i].value}</a>
+              className="contact-link"
+              href={info[i].link}
+            >{info[i].value}</a>
             : info[i].value
           }
         </Col>
       </Row>
     )
 
-    if(i !== info.length - 1)
-      rows.push(<hr key={i + "hr"}/>)
+    if (i !== info.length - 1)
+      rows.push(<hr key={i + "hr"} />)
   }
 
   return (
-    <div 
+    <div
       style={{
-        padding: isTabletOrMobile 
+        padding: isTabletOrMobile
           ? "30px 0"
-          : "30px", 
-      backgroundColor: "#e0e0e0"}}
+          : "30px",
+        backgroundColor: "#e0e0e0"
+      }}
     >
       <Container fluid="xl">
         {rows}

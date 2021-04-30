@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: local('Montserrat-Regular'), url(./Montserrat-Regular.woff) format('woff');
+  src: local('Montserrat-Regular'), url(../public/Montserrat-Regular.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Montserrat-Regular';
-  src: local('Montserrat-SemiBold'), url(./Montserrat-SemiBold.woff) format('woff');
+  src: local('Montserrat-SemiBold'), url(../public/Montserrat-SemiBold.woff) format('woff');
   font-weight: bold;
 }
 
