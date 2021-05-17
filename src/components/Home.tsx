@@ -37,7 +37,7 @@ export default function Home(props: any) {
         <br />
         <Button
           className="home-button"
-          href="/KennyMiuResume.pdf"
+          href="/resume-kenny.pdf"
           target={"_blank"}
         >
           Resume
