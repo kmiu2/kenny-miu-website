@@ -27,10 +27,20 @@ export default function Projects(props: any) {
       link: 'https://github.com/kmiu2/kenny-miu-website',
       linkText: "View Code",
       sub: 'ReactJS, Bootstrap, npm, CSS, HTML',
-      desc: ['Using React, I was able to create several quick and responsive SPAs such as this website.',
+      desc: ['Using React, I was able to create several quick and responsive SPAs such as this website. By using React Router and the SPA architecture, this website is able to instantly switch between sub pages.',
         <br />,
         <br />,
-        'By using React Router and the SPA architecture, this website is able to instantly switch between subpages.'
+        'This website is also mobile friendly! It will change and show a sidebar whenever the width hits a certain threshold.'
+      ]
+    },
+    {
+      img: rpiImg,
+      title: 'Raspberry Pi Projects',
+      sub: 'Raspberry Pi 3',
+      desc: ['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to practical applications',
+        <br />,
+        <br />,
+        'On the entertainment side, my projects include creating digital clocks and daily information displays. For more practical projects, I used the raspberry pi and spare drives to create a NAS.'
       ]
     },
     {
@@ -43,16 +53,6 @@ export default function Projects(props: any) {
         'When creating assemblies, I used the physical dynamics function of SolidWorks to simulate real life scenarios and account for stress, friction, and similar dynamics.'
       ]
     },
-    {
-      img: rpiImg,
-      title: 'Raspberry Pi Projects',
-      sub: 'Raspberry Pi 3',
-      desc: ['During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to practical applications',
-        <br />,
-        <br />,
-        'On the entertainment side, my projects include creating digital clocks and daily information displays. For more practical projects, I used the raspberry pi and spare drives to create a NAS.'
-      ]
-    }
   ];
 
   return (

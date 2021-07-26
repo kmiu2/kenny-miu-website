@@ -1,12 +1,24 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import Section from "./Section";
 import firstRoboticsImg from "../assets/first_robotics.jpg";
 import honeybeeLogoImg from "../assets/honeybee.svg";
 import markhamImg from "../assets/markham.png";
-import Section from "./Section";
+import polarImg from "../assets/polar.png";
 
 export default function WorkExperience(props: any) {
   const parts = [
+    {
+      date: "Sep 2021 - Dec 2021",
+      img: polarImg,
+      link: "https://polar.me/",
+      title: "Full Stack Developer",
+      location: "Toronto, Canada",
+      sub: "React, JavaScript, Python, Django, MySQL, MongoDB",
+      desc: [
+        "Polar is a creative advertising technology company which works with hundreds of publishers in 20+ countries. Publishers use Polar to promote their direct-sold branded content on-site through native ad formats. Over 2,500 publisher sites have delivered over 100 billion direct-sold native ads using Polar over the past several years.",
+      ]
+    },
     // {
     //   spotlight: true,
     //   date: "Jan 2021 - Apr 2021",
