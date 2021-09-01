@@ -83,11 +83,11 @@ export default function Section(props: any) {
               : "col-right-bottom"
             }>
               <Part
-                key={i + "part"}
+                key={(i + 1) + "part"}
                 date={parts[i + 1]?.date}
                 img={parts[i + 1]?.img}
                 link={parts[i + 1]?.link}
-                linkText={parts[i].linkText}
+                linkText={parts[i + 1]?.linkText}
                 title={parts[i + 1]?.title}
                 location={parts[i + 1]?.location}
                 sub={parts[i + 1]?.sub}
