@@ -4,20 +4,20 @@ import circuitImg from "../assets/circuit.jpg";
 import electroplateImg from "../assets/electroplate.jpg";
 import trampolineImg from "../assets/trampoline.png";
 import nanoSweaterImg from "../assets/nano_sweater.jpg";
-import danaPorterImg from "../assets/dana_porter.jpg";
+import doggoImg from "../assets/doggo.jpg";
 import Section from './Section';
 
 export default function Showcase(props: any) {
   const parts = [
     {
       spotlight: true,
-      img: danaPorterImg,
+      img: doggoImg,
       link: 'https://www.linkedin.com/in/kennymiu/',
       linkText: "LinkedIn",
-      title: 'Dana Porter Drawing',
+      title: 'Dog Drawing',
       sub: 'Procreate',
       desc: [
-        'During my free time, I like to explore my creative side like drawing art. For example, this is my drawing of the Dana Porter Library at the University of Waterloo. My drawing of the Quantum Nano Centre is currently my LinkedIn banner and can be found there.'
+        'During my free time, I like to explore my creative side like drawing art. For example, this is my drawing of a cute dog. My drawing of the Quantum Nano Centre is currently my LinkedIn banner and can be found there.'
       ]
     },
     {
