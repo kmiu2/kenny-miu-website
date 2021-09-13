@@ -12,12 +12,12 @@ export default function Showcase(props: any) {
     {
       spotlight: true,
       img: doggoImg,
-      link: 'https://www.linkedin.com/in/kennymiu/',
-      linkText: "LinkedIn",
+      link: 'https://www.instagram.com/everlasting_blizzart/',
+      linkText: "Instagram Art Account",
       title: 'Dog Drawing',
       sub: 'Procreate',
       desc: [
-        'During my free time, I like to explore my creative side like drawing art. For example, this is my drawing of a cute dog. My drawing of the Quantum Nano Centre is currently my LinkedIn banner and can be found there.'
+        'During my free time, I like to explore my creative side like drawing art. For example, this is my drawing of a cute dog. All my other art can be found on instagram.'
       ]
     },
     {
