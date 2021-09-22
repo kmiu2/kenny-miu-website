@@ -1,11 +1,13 @@
 @font-face {
-  font-family: 'Montserrat-Regular';
-  src: local('Montserrat-Regular'), url(./Montserrat-Regular.woff) format('woff');
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-Regular"),
+    url(./Montserrat-Regular.woff) format("woff");
 }
 
 @font-face {
-  font-family: 'Montserrat-Regular';
-  src: local('Montserrat-SemiBold'), url(./Montserrat-SemiBold.woff) format('woff');
+  font-family: "Montserrat-Regular";
+  src: local("Montserrat-SemiBold"),
+    url(./Montserrat-SemiBold.woff) format("woff");
   font-weight: bold;
 }
 
@@ -16,7 +18,7 @@ html {
 body {
   background: linear-gradient(#0b4987, #092847);
   background-size: cover;
-  font-family: 'Montserrat-Regular';
+  font-family: "Montserrat-Regular";
 }
 
 .home-button {
@@ -32,11 +34,11 @@ body {
 .home-button:hover {
   color: #40bdf7;
   background-color: transparent;
-  border-color: #40bdf7
+  border-color: #40bdf7;
 }
 
 .home-nav {
- background-color: #1b3146;
+  background-color: #1b3146;
 }
 
 .col-left {
@@ -62,6 +64,10 @@ body {
 .part-link:hover {
   color: #40bdf7;
 }
+.part-link-inactive {
+  color: inherit;
+  pointer-events: none;
+}
 
 .part-button {
   color: black;
@@ -75,7 +81,7 @@ body {
 .part-button:hover {
   color: #40bdf7;
   background-color: transparent;
-  border-color: #40bdf7
+  border-color: #40bdf7;
 }
 
 .contact-left-col {
@@ -93,7 +99,6 @@ body {
   color: #787878;
   text-decoration: underline;
 }
-
 
 /* SIDE BAR */
 .menu-button {

@@ -1,72 +1,96 @@
-import { Button } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import NavLink from 'react-bootstrap/NavLink';
+import { Button } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import NavLink from "react-bootstrap/NavLink";
 
-export default function Part(props: any) {
-  const { link, linkText, img, title, location, sub, desc, date } = props;
+export interface IPart {
+  date?: string;
+  description: any[];
+  img: string;
+  link?: string;
+  linkText?: string;
+  location?: string;
+  spotlight?: boolean;
+  subtitle?: string;
+  title: string;
+}
+
+export default function Part(props: { part: IPart }) {
+  const {
+    date,
+    description,
+    img,
+    link,
+    linkText,
+    location,
+    spotlight,
+    subtitle,
+    title,
+  } = props.part;
 
   return (
-    <div className="container">
-      <Jumbotron style={{
-        backgroundColor: 'transparent',
-        textAlign: 'center',
-        height: '100%'
-      }}>
-        <p style={{
-          fontSize: '1.2rem',
-          fontStyle: 'italic'
-        }}>{date}</p>
-        <br />
-        {link != null ?
-          <NavLink
-            className="part-link"
-            href={link}
-            target={"_blank"}
-          >
-            <h1 style={{
-              fontSize: '2.1rem',
-              fontWeight: 350,
-            }}>{title}</h1>
-          </NavLink>
-          :
-          <h1 style={{
-            fontSize: '2.1rem',
+    <Jumbotron
+      style={{
+        backgroundColor: "transparent",
+        textAlign: "center",
+        height: "100%",
+      }}
+    >
+      {date ?? (
+        <p
+          style={{
+            fontSize: "1.2rem",
+            fontStyle: "italic",
+          }}
+        >
+          {date}
+        </p>
+      )}
+      <NavLink
+        className={link != null ? "part-link" : "part-link-inactive"}
+        href={link}
+        target={"_blank"}
+      >
+        <h1
+          style={{
+            fontSize: "2.1rem",
             fontWeight: 350,
-          }}>{title}</h1>}
-        <br />
-        {location != null ? <h3>{location}</h3> : null}
-        {img != null ?
-          <div style={{ padding: 15 }}>
-            <Image
-              src={img}
-              rounded
-              alt={title}
-              style={{
-                minWidth: '50%',
-                maxWidth: 225,
-              }}
-            />
-          </div> : null}
-        <br />
-        <br />
-        {sub != null ? <h4 style={{ fontWeight: 'bold' }}>{sub}</h4> : null}
-        <br />
-        <p style={{
-          fontSize: '1.5rem',
+            paddingBottom: 15,
+          }}
+        >
+          {title}
+        </h1>
+      </NavLink>
+      {location != null && <h3>{location}</h3>}
+      <div style={{ padding: 15 }}>
+        <Image
+          src={img}
+          rounded
+          alt={title}
+          style={{
+            width: "75%",
+            maxWidth: spotlight ? 500 : 300,
+            paddingBottom: 30,
+          }}
+        />
+      </div>
+      {subtitle != null && (
+        <h4 style={{ fontWeight: "bold", paddingBottom: 30 }}>{subtitle}</h4>
+      )}
+      <p
+        style={{
+          fontSize: "1.5rem",
           fontWeight: 200,
-          lineHeight: '165%'
-        }}>{desc}</p>
-        <br />
-        {link != null ?
-          <Button
-            className="part-button"
-            href={link}
-            target={"_blank"}
-          >
-            {linkText ?? "Website"}
-          </Button> : null}
-      </Jumbotron>
-    </div>
+          lineHeight: "165%",
+        }}
+      >
+        {description}
+      </p>
+      {link != null && (
+        <Button className="part-button" href={link} target={"_blank"}>
+          {linkText ?? "Website"}
+        </Button>
+      )}
+    </Jumbotron>
   );
 }
