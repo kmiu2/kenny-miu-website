@@ -15,7 +15,7 @@ export default function WorkExperience() {
       link: "https://polar.me/",
       title: "Full Stack Developer",
       location: "Toronto, Canada",
-      subtitle: "React, JavaScript, Python, Django, MySQL, MongoDB",
+      subtitle: "React, Redux, JavaScript, Python, Django, Jest",
       description: [
         "Polar is a creative advertising technology company which works with hundreds of publishers in 20+ countries. Publishers use Polar to promote their direct-sold branded content on-site through native ad formats. Over 2,500 publisher sites have delivered over 100 billion direct-sold native ads using Polar over the past several years.",
       ],
