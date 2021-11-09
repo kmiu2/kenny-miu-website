@@ -1,8 +1,8 @@
 import Container from "react-bootstrap/Container";
-import Section from "./Section";
-import uwLogoImg from "../assets/uw_icon.svg";
 import staLogoImg from "../assets/sta_icon.svg";
+import uwLogoImg from "../assets/uw_icon.svg";
 import { IPart } from "./Part";
+import Section from "./Section";
 
 export default function Education() {
   const parts: IPart[] = [

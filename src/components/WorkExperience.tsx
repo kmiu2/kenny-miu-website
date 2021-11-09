@@ -1,11 +1,10 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
-import Section from "./Section";
 import firstRoboticsImg from "../assets/first_robotics.jpg";
 import honeybeeLogoImg from "../assets/honeybee.svg";
 import markhamImg from "../assets/markham.png";
 import polarImg from "../assets/polar.png";
 import { IPart } from "./Part";
+import Section from "./Section";
 
 export default function WorkExperience() {
   const parts: IPart[] = [

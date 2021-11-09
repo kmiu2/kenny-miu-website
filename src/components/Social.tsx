@@ -1,5 +1,5 @@
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import Button from "react-bootstrap/Button";
+import ButtonToolbar from "react-bootstrap/ButtonToolbar";
 import { ReactComponent as GitHubIcon } from "../assets/github.svg";
 import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
 

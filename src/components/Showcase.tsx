@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
 import carImg from "../assets/car.png";
 import circuitImg from "../assets/circuit.jpg";
-import electroplateImg from "../assets/electroplate.jpg";
-import trampolineImg from "../assets/trampoline.png";
-import nanoSweaterImg from "../assets/nano_sweater.jpg";
 import doggoImg from "../assets/doggo.jpg";
-import Section from "./Section";
+import electroplateImg from "../assets/electroplate.jpg";
+import nanoSweaterImg from "../assets/nano_sweater.jpg";
+import trampolineImg from "../assets/trampoline.png";
 import { IPart } from "./Part";
+import Section from "./Section";
 
 export default function Showcase() {
   const parts: IPart[] = [

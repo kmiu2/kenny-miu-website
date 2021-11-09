@@ -1,4 +1,4 @@
-import { Jumbotron, Image } from "react-bootstrap";
+import { Image, Jumbotron } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import wizImg from "../assets/wizard.png";
 
