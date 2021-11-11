@@ -2,6 +2,7 @@
   font-family: "Montserrat-Regular";
   src: local("Montserrat-Regular"),
     url(./Montserrat-Regular.woff) format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -9,6 +10,7 @@
   src: local("Montserrat-SemiBold"),
     url(./Montserrat-SemiBold.woff) format("woff");
   font-weight: bold;
+  font-display: swap;
 }
 
 html {
