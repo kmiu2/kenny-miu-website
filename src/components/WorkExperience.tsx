@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import firstRoboticsImg from "../assets/first_robotics.jpg";
+import firstRoboticsImg from "../assets/first_robotics.png";
 import honeybeeLogoImg from "../assets/honeybee.svg";
 import markhamImg from "../assets/markham.png";
 import polarImg from "../assets/polar.png";

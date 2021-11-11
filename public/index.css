@@ -21,6 +21,18 @@ body {
   font-family: "Montserrat-Regular";
 }
 
+.full-page-loader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
 .home-button {
   border: 5px solid white;
   background-color: transparent;
@@ -92,11 +104,11 @@ body {
   padding: 20px;
 }
 .contact-right-col {
-  color: #787878;
+  color: #5a5959;
   padding: 20px;
 }
 .contact-link {
-  color: #787878;
+  color: #5a5959;
   text-decoration: underline;
 }
 
