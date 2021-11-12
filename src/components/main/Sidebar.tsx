@@ -2,18 +2,21 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import Social from "./Social";
+import { Social } from "./Social";
 
-export default function Sidebar() {
+export function Sidebar() {
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
   useEffect(() => {
     function onScroll() {
       let currentPosition = window.pageYOffset;
 
-      // Need to do it like this to prevent constant setStates
-      if (currentPosition > 900) setShouldShowShadow(true);
-      else setShouldShowShadow(false);
+      // Prevent recurring setStates
+      if (currentPosition > 900) {
+        setShouldShowShadow(true);
+      } else {
+        setShouldShowShadow(false);
+      }
     }
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);

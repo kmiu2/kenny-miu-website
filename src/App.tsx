@@ -2,17 +2,17 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useMediaQuery } from "react-responsive";
 import { NavLink, Route, Switch, useLocation } from "react-router-dom";
-import Contact from "./components/Contact";
-import CustomError from "./components/CustomError";
-import Education from "./components/Education";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Showcase from "./components/Showcase";
-import Sidebar from "./components/Sidebar";
-import Social from "./components/Social";
-import WorkExperience from "./components/WorkExperience";
+import { Contact } from "./components/main/Contact";
+import { Home } from "./components/main/Home";
+import { Sidebar } from "./components/main/Sidebar";
+import { Social } from "./components/main/Social";
+import { CustomError } from "./components/sections/CustomError";
+import { Education } from "./components/sections/Education";
+import { Projects } from "./components/sections/Projects";
+import { Showcase } from "./components/sections/Showcase";
+import { WorkExperience } from "./components/sections/WorkExperience";
 
-export default function App() {
+export function App() {
   let location = useLocation();
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 

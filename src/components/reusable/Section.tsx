@@ -2,9 +2,9 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useMediaQuery } from "react-responsive";
-import Part, { IPart } from "./Part";
+import { IPart, Part } from "./Part";
 
-export default function Section(props: { parts: IPart[] }) {
+export function Section(props: { parts: IPart[] }) {
   const { parts } = props;
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });

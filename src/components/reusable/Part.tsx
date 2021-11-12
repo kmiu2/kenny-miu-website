@@ -15,7 +15,7 @@ export interface IPart {
   title: string;
 }
 
-export default function Part(props: { part: IPart }) {
+export function Part(props: { part: IPart }) {
   const {
     date,
     description,

@@ -1,10 +1,10 @@
 import Container from "react-bootstrap/Container";
-import staLogoImg from "../assets/sta_icon.svg";
-import uwLogoImg from "../assets/uw_icon.svg";
-import { IPart } from "./Part";
-import Section from "./Section";
+import staLogoImg from "../../assets/sta_icon.svg";
+import uwLogoImg from "../../assets/uw_icon.svg";
+import { IPart } from "../reusable/Part";
+import { Section } from "../reusable/Section";
 
-export default function Education() {
+export function Education() {
   const parts: IPart[] = [
     {
       date: "Sept 2019 - April 2024",

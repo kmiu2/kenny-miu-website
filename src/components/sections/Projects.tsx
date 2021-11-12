@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
-import reactImg from "../assets/react.svg";
-import rpiImg from "../assets/rpi.png";
-import swImg from "../assets/sw.png";
-import xcodeImg from "../assets/xcode.png";
-import { IPart } from "./Part";
-import Section from "./Section";
+import reactImg from "../../assets/react.svg";
+import rpiImg from "../../assets/rpi.png";
+import swImg from "../../assets/sw.png";
+import xcodeImg from "../../assets/xcode.png";
+import { IPart } from "../reusable/Part";
+import { Section } from "../reusable/Section";
 
-export default function Projects() {
+export function Projects() {
   const parts: IPart[] = [
     {
       spotlight: true,

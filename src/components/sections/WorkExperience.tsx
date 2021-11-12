@@ -1,12 +1,12 @@
 import Container from "react-bootstrap/Container";
-import firstRoboticsImg from "../assets/first_robotics.png";
-import honeybeeLogoImg from "../assets/honeybee.svg";
-import markhamImg from "../assets/markham.png";
-import polarImg from "../assets/polar.png";
-import { IPart } from "./Part";
-import Section from "./Section";
+import firstRoboticsImg from "../../assets/first_robotics.png";
+import honeybeeLogoImg from "../../assets/honeybee.svg";
+import markhamImg from "../../assets/markham.png";
+import polarImg from "../../assets/polar.png";
+import { IPart } from "../reusable/Part";
+import { Section } from "../reusable/Section";
 
-export default function WorkExperience() {
+export function WorkExperience() {
   const parts: IPart[] = [
     {
       date: "Sep 2021 - Dec 2021",

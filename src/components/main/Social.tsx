@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import ButtonToolbar from "react-bootstrap/ButtonToolbar";
-import { ReactComponent as GitHubIcon } from "../assets/github.svg";
-import { ReactComponent as LinkedInIcon } from "../assets/linkedin.svg";
+import { ReactComponent as GitHubIcon } from "../../assets/github.svg";
+import { ReactComponent as LinkedInIcon } from "../../assets/linkedin.svg";
 
-export default function Social(props: { fill?: string }) {
+export function Social(props: { fill?: string }) {
   const { fill } = props;
 
   return (

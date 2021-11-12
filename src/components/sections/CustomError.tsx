@@ -1,8 +1,8 @@
 import { Image, Jumbotron } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import wizImg from "../assets/wizard.png";
+import wizImg from "../../assets/wizard.png";
 
-export default function CustomError() {
+export function CustomError() {
   return (
     <Jumbotron
       style={{

@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import { useMediaQuery } from "react-responsive";
-import meImage from "../assets/me.jpg";
+import meImage from "../../assets/me.jpg";
 
-export default function Home() {
+export function Home() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
   return (
