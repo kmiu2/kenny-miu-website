@@ -1,0 +1,66 @@
+.partWrapper {
+  background-color: transparent;
+  text-align: center;
+  height: 100%;
+}
+
+.image {
+  width: 75%;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 1.5rem;
+}
+.image.spotlight {
+  max-width: 500px;
+}
+
+.dateText {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding-bottom: 7.5px;
+}
+.titleText {
+  font-size: 2.1rem;
+  font-weight: 350;
+  padding-bottom: 15px;
+}
+.locationText {
+  font-size: 1.75rem;
+}
+.subtitleText {
+  font-size: 1.45rem;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.descriptionText {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 165%;
+  padding-bottom: 20px;
+}
+
+.partLink {
+  color: inherit;
+  display: inline;
+}
+.partLink:hover {
+  color: #40bdf7;
+}
+.partLink.inactive {
+  pointer-events: none;
+}
+
+.partButton {
+  color: black;
+  border: 3px solid black;
+  background-color: transparent;
+  border-radius: 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.partButton:hover {
+  color: #40bdf7;
+  background-color: transparent;
+  border-color: #40bdf7;
+}

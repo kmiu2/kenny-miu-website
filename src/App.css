@@ -1,0 +1,14 @@
+.desktopPadding {
+  padding: 0 7.5%;
+}
+.mobilePadding {
+  padding: 0;
+  position: relative;
+}
+
+.homeNav {
+  background-color: #1b3146;
+}
+.homeNavCollapse {
+  justify-content: end;
+}

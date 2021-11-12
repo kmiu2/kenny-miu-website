@@ -1,0 +1,98 @@
+.sidebarWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.menuButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: black;
+  border: 0;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 0px;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+.menuButton.boxShadow {
+  box-shadow: 3px 3px 3px 3px #ccc;
+}
+
+.menuIcon {
+  vertical-align: text-top;
+  padding-top: 3px;
+  padding-right: 5px;
+}
+
+.navOverlay {
+  width: 100%;
+  background-color: #464747;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: 850ms;
+  pointer-events: none;
+}
+.navOverlay.active {
+  opacity: 0.75;
+  transition: 350ms;
+  pointer-events: auto;
+}
+
+.navMenu {
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+.navMenu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.navText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 60px;
+}
+.navText a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding-left: 20px;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 0px;
+}
+.navText a:hover {
+  color: black;
+  background-color: white;
+}
+
+.navMenuItems {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navbarToggle {
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding-top: 8px;
+  padding-left: 18px;
+  justify-content: flex-start;
+  align-items: center;
+}

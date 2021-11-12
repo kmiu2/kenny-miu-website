@@ -1,0 +1,23 @@
+.contactWrapper {
+  padding: 30px;
+  background-color: #e0e0e0;
+}
+.contactWrapper.mobile {
+  padding: 30px 0;
+}
+
+.contactLeftCol {
+  text-align: center;
+  font-weight: bold;
+  color: #636363;
+  text-transform: uppercase;
+  padding: 20px;
+}
+.contactRightCol {
+  color: #5a5959;
+  padding: 20px;
+}
+.contactLink {
+  color: #5a5959;
+  text-decoration: underline;
+}

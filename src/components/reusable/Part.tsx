@@ -2,10 +2,11 @@ import { Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import NavLink from "react-bootstrap/NavLink";
+import "./Part.css";
 
 export interface IPart {
   date?: string;
-  description: any[];
+  description: string[];
   img: string;
   link?: string;
   linkText?: string;
@@ -28,66 +29,36 @@ export function Part(props: { part: IPart }) {
     title,
   } = props.part;
 
+  const renderDescription = (description: string[]) => {
+    return description.map((text) => (
+      <div className="descriptionText" key={text}>
+        {text}
+      </div>
+    ));
+  };
+
   return (
-    <Jumbotron
-      style={{
-        backgroundColor: "transparent",
-        textAlign: "center",
-        height: "100%",
-      }}
-    >
-      {date ?? (
-        <p
-          style={{
-            fontSize: "1.2rem",
-            fontStyle: "italic",
-          }}
-        >
-          {date}
-        </p>
-      )}
-      <NavLink
-        className={link != null ? "part-link" : "part-link-inactive"}
-        href={link}
-        target={"_blank"}
-      >
-        <h1
-          style={{
-            fontSize: "2.1rem",
-            fontWeight: 350,
-            paddingBottom: 15,
-          }}
+    <Jumbotron className="partWrapper">
+      {date && <div className="dateText">{date}</div>}
+      <div className="titleText">
+        <NavLink
+          className={link ? "partLink" : "partLink inactive"}
+          href={link}
+          target="_blank"
         >
           {title}
-        </h1>
-      </NavLink>
-      {location != null && <h3>{location}</h3>}
-      <div style={{ padding: 15 }}>
-        <Image
-          src={img}
-          rounded
-          alt={title}
-          style={{
-            width: "75%",
-            maxWidth: spotlight ? 500 : 300,
-            paddingBottom: 30,
-          }}
-        />
+        </NavLink>
       </div>
-      {subtitle != null && (
-        <h4 style={{ fontWeight: "bold", paddingBottom: 30 }}>{subtitle}</h4>
-      )}
-      <p
-        style={{
-          fontSize: "1.5rem",
-          fontWeight: 200,
-          lineHeight: "165%",
-        }}
-      >
-        {description}
-      </p>
-      {link != null && (
-        <Button className="part-button" href={link} target={"_blank"}>
+      {location && <div className="locationText">{location}</div>}
+      <Image
+        className={spotlight ? "image spotlight" : "image"}
+        src={img}
+        alt={title}
+      />
+      {subtitle && <div className="subtitleText">{subtitle}</div>}
+      {renderDescription(description)}
+      {link && (
+        <Button className="partButton" href={link} target="_blank">
           {linkText ?? "Website"}
         </Button>
       )}

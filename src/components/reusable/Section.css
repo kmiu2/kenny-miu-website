@@ -1,0 +1,15 @@
+.colLeft {
+  background-color: white;
+  border-right: 2px solid #c9c9c9;
+  border-bottom: 2px solid #c9c9c9;
+}
+.colLeft.bottom {
+  border-bottom: none;
+}
+.colRight {
+  background-color: white;
+  border-bottom: 2px solid #c9c9c9;
+}
+.colRight.bottom {
+  border-bottom: none;
+}

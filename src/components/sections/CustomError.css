@@ -1,0 +1,19 @@
+.customErrorWrapper {
+  background-color: white;
+  text-align: center;
+  height: 100%;
+}
+.errorText {
+  font-size: 1.75rem;
+}
+.errorButton {
+  display: block;
+  padding: 0.5rem;
+}
+
+.errorImage {
+  width: 75%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 1.5rem;
+}

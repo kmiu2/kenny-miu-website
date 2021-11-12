@@ -3,59 +3,48 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useMediaQuery } from "react-responsive";
 import { IPart, Part } from "./Part";
+import "./Section.css";
 
 export function Section(props: { parts: IPart[] }) {
   const { parts } = props;
+  const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  const rows = [];
+  const renderRows = (parts: IPart[]) => {
+    const rows: any[] = [];
+    let index = 0;
 
-  if (isTabletOrMobile) {
-    for (let i = 0; i < parts.length; i++) {
-      rows.push(
-        <Row key={i + "row"} noGutters>
-          <Col
-            key={i + "col"}
-            className={i < parts.length - 1 ? "col-right" : "col-right-bottom"}
-          >
-            <Part key={i + "part"} part={parts[i]} />
-          </Col>
-        </Row>
-      );
-    }
-  } else {
-    for (let i = 0; i < parts.length; i += 2) {
-      if (parts[i].spotlight) {
+    while (index < parts.length) {
+      const part = parts[index];
+      const nextPart = parts[index + 1];
+      const columnsPerRow = isMobile || part.spotlight ? 1 : 2;
+      const isLastRow = index >= parts.length - columnsPerRow;
+
+      if (columnsPerRow === 1) {
         rows.push(
-          <Row key={i + "row"} noGutters>
-            <Col className="col-right">
-              <Part key={i + "part"} part={parts[i]} />
+          <Row key={index} noGutters>
+            <Col className={isLastRow ? "colRight bottom" : "colRight"}>
+              <Part part={part} />
             </Col>
           </Row>
         );
-        i--;
       } else {
+        const isLastRow = index >= parts.length - 2;
         rows.push(
-          <Row key={i + "row"} noGutters>
-            <Col
-              className={i < parts.length - 2 ? "col-left" : "col-left-bottom"}
-            >
-              <Part key={i + "part"} part={parts[i]} />
+          <Row key={index} noGutters>
+            <Col className={isLastRow ? "colLeft bottom" : "colLeft"}>
+              <Part part={part} />
             </Col>
-            <Col
-              className={
-                i < parts.length - 2 ? "col-right" : "col-right-bottom"
-              }
-            >
-              {parts[i + 1] && (
-                <Part key={i + 1 + "part"} part={parts[i + 1]} />
-              )}
+            <Col className={isLastRow ? "colRight bottom" : "colRight"}>
+              {nextPart && <Part part={nextPart} />}
             </Col>
           </Row>
         );
       }
+      index += columnsPerRow;
     }
-  }
 
-  return <Container fluid="xl">{rows}</Container>;
+    return rows;
+  };
+
+  return <Container fluid="xl">{renderRows(parts)}</Container>;
 }

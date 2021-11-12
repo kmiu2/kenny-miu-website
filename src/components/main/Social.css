@@ -1,0 +1,6 @@
+.buttonToolbar {
+  filter: grayscale(25%);
+}
+.iconLink:hover {
+  fill: #40bdf7;
+}

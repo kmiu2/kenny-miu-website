@@ -1,0 +1,45 @@
+.jumbotronWrapper {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.nameHeader {
+  font-size: 4.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.nameHeader.mobile {
+  font-size: 3.7rem;
+}
+
+.titlesSubheader {
+  font-size: 2rem;
+  padding: 2vh 0;
+}
+.titlesSubheader.mobile {
+  font-size: 1.7rem;
+}
+
+.imgWrapper {
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.homeButton {
+  border: 5px solid white;
+  background-color: transparent;
+  border-radius: 0;
+  min-width: 225px;
+  width: 20%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.homeButton:hover {
+  color: #40bdf7;
+  background-color: transparent;
+  border-color: #40bdf7;
+}

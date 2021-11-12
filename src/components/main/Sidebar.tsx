@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import { urlLinks } from "../../App";
+import "./Sidebar.css";
 import { Social } from "./Social";
 
 export function Sidebar() {
@@ -9,10 +11,7 @@ export function Sidebar() {
 
   useEffect(() => {
     function onScroll() {
-      let currentPosition = window.pageYOffset;
-
-      // Prevent recurring setStates
-      if (currentPosition > 900) {
+      if (window.pageYOffset > 900) {
         setShouldShowShadow(true);
       } else {
         setShouldShowShadow(false);
@@ -22,68 +21,39 @@ export function Sidebar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [shouldShowShadow]);
 
-  const SidebarData = [
-    {
-      title: "Home",
-      path: "/",
-    },
-    {
-      title: "Work Experience",
-      path: "/work-experience",
-    },
-    {
-      title: "Projects",
-      path: "/projects",
-    },
-    {
-      title: "Education",
-      path: "/education",
-    },
-    {
-      title: "Showcase",
-      path: "/showcase",
-    },
-  ];
-
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
+  const [sidebarActive, setSidebarActive] = useState(false);
+  const toggleSidebar = () => setSidebarActive(!sidebarActive);
 
   return (
-    <div>
+    <div className="sidebarWrapper">
       <Button
-        className="menu-button"
-        onClick={showSidebar}
-        style={{
-          boxShadow: shouldShowShadow ? "3px 3px 3px 3px #ccc" : undefined,
-        }}
+        className={shouldShowShadow ? "menuButton boxShadow" : "menuButton"}
+        onClick={toggleSidebar}
       >
-        <AiOutlineMenu
-          style={{ verticalAlign: "text-top", paddingTop: "3px" }}
-        />{" "}
+        <AiOutlineMenu className="menuIcon" />
         Menu
       </Button>
       <div
-        className={sidebar ? "nav-overlay active" : "nav-overlay"}
-        style={{ pointerEvents: sidebar ? "auto" : "none" }}
-        onClick={showSidebar}
+        className={sidebarActive ? "navOverlay active" : "navOverlay"}
+        onClick={toggleSidebar}
       />
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items" onClick={showSidebar}>
-          <li className="navbar-toggle">
+      <div className={sidebarActive ? "navMenu active" : "navMenu"}>
+        <ul className="navMenuItems" onClick={toggleSidebar}>
+          <li className="navbarToggle">
             <AiOutlineClose size={22} />
           </li>
-          {SidebarData.map((item, index) => {
+          {urlLinks.map((link) => {
             return (
-              <li key={index} className="nav-text">
-                <NavLink to={item.path}>{item.title}</NavLink>
+              <li key={link.path} className="navText">
+                <NavLink to={link.path}>{link.text}</NavLink>
               </li>
             );
           })}
-          <li className="navbar-toggle">
+          <li className="navbarToggle">
             <Social />
           </li>
         </ul>
-      </nav>
+      </div>
     </div>
   );
 }
