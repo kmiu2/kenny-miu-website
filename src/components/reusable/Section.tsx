@@ -46,5 +46,9 @@ export function Section(props: { parts: IPart[] }) {
     return rows;
   };
 
-  return <Container fluid="xl">{renderRows(parts)}</Container>;
+  return (
+    <Container className="sectionWrapper" fluid="xl">
+      {renderRows(parts)}
+    </Container>
+  );
 }

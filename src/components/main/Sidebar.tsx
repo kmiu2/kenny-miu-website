@@ -5,8 +5,10 @@ import { NavLink } from "react-router-dom";
 import { urlLinks } from "../../App";
 import "./Sidebar.css";
 import { Social } from "./Social";
+import { ThemeSwitch } from "./ThemeSwitch";
 
-export function Sidebar() {
+export function Sidebar(props: { theme: string; setTheme: any }) {
+  const { theme, setTheme } = props;
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
   useEffect(() => {
@@ -53,6 +55,7 @@ export function Sidebar() {
             <Social />
           </li>
         </ul>
+        <ThemeSwitch theme={theme} setTheme={setTheme} />
       </div>
     </div>
   );

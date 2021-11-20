@@ -2,11 +2,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useMediaQuery } from "react-responsive";
 import { NavLink, Route, Switch, useLocation } from "react-router-dom";
+import useLocalStorage from "use-local-storage";
 import "./App.css";
 import { Contact } from "./components/main/Contact";
 import { Home } from "./components/main/Home";
 import { Sidebar } from "./components/main/Sidebar";
-import { Social } from "./components/main/Social";
+import { ThemeSwitch } from "./components/main/ThemeSwitch";
 import { CustomError } from "./components/sections/CustomError";
 import { Education } from "./components/sections/Education";
 import { Projects } from "./components/sections/Projects";
@@ -39,7 +40,12 @@ export const urlLinks: IURLLink[] = [
 
 export function App() {
   let location = useLocation();
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
 
   const renderNavbar = (navLinks: IURLLink[]) => {
     if (isMobile) {
@@ -59,7 +65,7 @@ export function App() {
             ))}
           </Nav>
           <Navbar.Collapse className="homeNavCollapse">
-            <Social />
+            <ThemeSwitch theme={theme} setTheme={setTheme} />
           </Navbar.Collapse>
         </Navbar>
       </div>
@@ -67,10 +73,10 @@ export function App() {
   };
 
   return (
-    <div>
+    <div className="appWrapper" data-theme={theme}>
       <Home />
       {renderNavbar(urlLinks)}
-      {isMobile && <Sidebar />}
+      {isMobile && <Sidebar theme={theme} setTheme={setTheme} />}
       <div className={isMobile ? "mobilePadding" : "desktopPadding"}>
         <Switch location={location}>
           <Route path="/" component={WorkExperience} exact />

@@ -18,9 +18,43 @@ html {
 }
 
 body {
-  background: linear-gradient(#0b4987, #092847);
-  background-size: cover;
   font-family: "Montserrat-Regular";
+  --transitionTime: 0.3s;
+  --hoverColor: #40bdf7;
+  --appBackground: #0b4987;
+  --homeNavBackground: #1b3146;
+
+  --sectionBackground: white;
+  --sectionText: black;
+  --sectionDivider: #c9c9c9;
+
+  --contactBackground: #e0e0e0;
+  --contactTextLeft: #636363;
+  --contactTextRight: #5a5959;
+
+  --sidebarOverlay: #464747;
+  --sidebarBackground: #060b26;
+  --sidebarText: white;
+  --sidebarBoxShadow: #cccccc;
+  --sidebarHover: white;
+}
+
+[data-theme="dark"] {
+  --appBackground: #05203b;
+  --homeNavBackground: #132331;
+
+  --sectionBackground: #252525;
+  --sectionText: rgba(255, 255, 255, 0.87);
+  --sectionDivider: rgba(223, 223, 223, 0.87);
+
+  --contactBackground: #4d4d4d;
+  --contactTextLeft: rgba(255, 255, 255, 0.85);
+  --contactTextRight: rgba(243, 241, 241, 0.8);
+
+  --sidebarBackground: #090b13;
+  --sidebarText: rgba(255, 255, 255, 0.87);
+  --sidebarBoxShadow: transparent;
+  --sidebarHover: rgba(255, 255, 255, 0.87);
 }
 
 .fullPageLoader {
@@ -33,4 +67,26 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+.fullPageLoader > img {
+  animation: 2s infinite pulse;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

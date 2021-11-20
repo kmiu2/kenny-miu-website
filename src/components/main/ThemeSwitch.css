@@ -1,0 +1,22 @@
+.themeSwitchWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.themeSwitchWrapper.mobile {
+  padding: 20px;
+}
+
+.themeToggle {
+  width: 50px;
+  margin: 10px;
+  font-size: 18px;
+  color: rgb(255, 123, 0);
+  border-color: var(--hoverColor);
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: white;
+  border-color: var(--hoverColor);
+  background-color: var(--hoverColor);
+}

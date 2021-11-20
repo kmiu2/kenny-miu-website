@@ -29,7 +29,7 @@ export function Contact() {
     },
     {
       text: "Social",
-      value: <Social fillColour="#787878" />,
+      value: <Social fillColour="var(--contactTextRight)" />,
     },
   ];
 

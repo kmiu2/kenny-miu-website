@@ -1,6 +1,6 @@
 .jumbotronWrapper {
   background-color: transparent;
-  color: #fff;
+  color: white;
   text-align: center;
   padding-bottom: 0;
 }
@@ -39,7 +39,7 @@
   text-transform: uppercase;
 }
 .homeButton:hover {
-  color: #40bdf7;
+  color: var(--hoverColor);
   background-color: transparent;
-  border-color: #40bdf7;
+  border-color: var(--hoverColor);
 }

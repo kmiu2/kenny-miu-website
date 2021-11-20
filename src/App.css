@@ -1,3 +1,7 @@
+.appWrapper {
+  background-color: var(--appBackground);
+  transition: background-color var(--transitionTime) ease;
+}
 .desktopPadding {
   padding: 0 7.5%;
 }
@@ -7,7 +11,8 @@
 }
 
 .homeNav {
-  background-color: #1b3146;
+  background-color: var(--homeNavBackground);
+  transition: background-color var(--transitionTime) ease;
 }
 .homeNavCollapse {
   justify-content: end;

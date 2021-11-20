@@ -2,5 +2,5 @@
   filter: grayscale(25%);
 }
 .iconLink:hover {
-  fill: #40bdf7;
+  fill: var(--hoverColor);
 }

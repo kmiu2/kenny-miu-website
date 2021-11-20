@@ -1,14 +1,18 @@
+.sectionWrapper {
+  background-color: var(--sectionBackground);
+  color: var(--sectionText);
+  transition: background-color var(--transitionTime) ease;
+  transition: color var(--transitionTime) ease;
+}
 .colLeft {
-  background-color: white;
-  border-right: 2px solid #c9c9c9;
-  border-bottom: 2px solid #c9c9c9;
+  border-right: 2px solid var(--sectionDivider);
+  border-bottom: 2px solid var(--sectionDivider);
 }
 .colLeft.bottom {
   border-bottom: none;
 }
 .colRight {
-  background-color: white;
-  border-bottom: 2px solid #c9c9c9;
+  border-bottom: 2px solid var(--sectionDivider);
 }
 .colRight.bottom {
   border-bottom: none;

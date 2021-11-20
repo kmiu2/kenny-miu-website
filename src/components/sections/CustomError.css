@@ -1,7 +1,10 @@
 .customErrorWrapper {
-  background-color: white;
+  background-color: var(--sectionBackground);
+  color: var(--sectionText);
   text-align: center;
-  height: 100%;
+  margin-bottom: 0;
+  transition: background-color var(--transitionTime) ease;
+  transition: color var(--transitionTime) ease;
 }
 .errorText {
   font-size: 1.75rem;
