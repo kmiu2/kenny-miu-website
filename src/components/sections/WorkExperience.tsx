@@ -19,18 +19,6 @@ export function WorkExperience() {
         "Polar is a creative advertising technology company which works with hundreds of publishers in 20+ countries. Publishers use Polar to promote their direct-sold branded content on-site through native ad formats. Over 2,500 publisher sites have delivered over 100 billion direct-sold native ads using Polar over the past several years.",
       ],
     },
-    // {
-    //   date: "Jan 2021 - Apr 2021",
-    //   img: honeybeeLogoImg,
-    //   link: "https://www.honeybeehub.io/",
-    //   title: "DevOps Developer",
-    //   location: "Toronto, Canada",
-    //   subtitle: "Kubernetes, GCP, Python, Flask",
-    //   description: [
-    //     "After learning about the structure of Kubernetes and networking, I implemented a new domain to the Honeybee Hub codebase",
-    //     "From this domain, I developed endpoints with Flask and Python to handle any logic the recommendation engine will need.",
-    //   ],
-    // },
     {
       date: "Jan 2021 - Apr 2021",
       img: honeybeeLogoImg,
@@ -39,8 +27,8 @@ export function WorkExperience() {
       location: "Toronto, Canada",
       subtitle: "Flutter, Dart, MongoDB, Google Cloud Platform",
       description: [
-        "With a team of five, we developed many key new features for Honeybee such as a data collection system, a referral system, a recommendation system, and a rewards system. I personally lead our team in creating the profile data collection system by creating the data structures and function definitions as well as coordinating with the UI/UX team.",
-        "In addition, the referral system we implemented greatly succeeded as both requests to join studies and study completions rose significantly ever since it was implemented. One of my first projects to be done during this term was to create the domain required for the recommendation endpoints by working with GCP, Kubernetes, Docker and other DevOp tools.",
+        "With a team of five, we developed many key features for Honeybee such as a data collection system, a referral system, a recommendation system, and a rewards system. I personally lead our team in implementing the profile data collection system by creating the data structures and function definitions as well as coordinating with the UI/UX team.",
+        "In addition, the referral system we implemented brought great success as both the number of requests to join studies and study completion rates rose significantly since it was implemented. Another project I worked on during this coop was creating a domain for the recommendation endpoints by using with GCP, Kubernetes, Docker and other DevOp tools.",
       ],
     },
     {
@@ -51,8 +39,8 @@ export function WorkExperience() {
       location: "Toronto, Canada",
       subtitle: "React, NodeJs, Typescript",
       description: [
-        "As I have used survey builders such as Google Forms and Qualtrics before, developing one from scratch was fairly straightforward.",
-        "After creating the builder page, I developed all the APIs necessary for a survey builder to function and then shortly finished developing the responder page.",
+        "Having previously used survey builders like Google Forms and Qualtrics, developing and testing one from scratch was a fairly straightforward process as there was an industry standard for validations, checks, and question types.",
+        "After creating the React front end, I developed all the APIs necessary for a survey builder to function, such as GET, EDIT, and DELETE functions. The final part in the flow was to developer the survey responder page and ensuring the entire flow from start to finish was linked.",
       ],
     },
     {
@@ -63,7 +51,8 @@ export function WorkExperience() {
       location: "Toronto, Canada",
       subtitle: "LEGO NXT",
       description: [
-        "Having experience from previous competitions, I led my team to victory. Despite being the youngest team at the competition, I was still able to guide my team of 9-11 y/o to success, earning nearly all the possible points even available to obtain.",
+        "Having experience from previous competitions, I led my team to victory at a local tournament. Despite being the youngest team at the competition, I was still able to guide my team of 9-11 y/o students to success. By completing most of the missions in the HYDRODYNAMICS challenge, we earned nearly all the possible points with time to spare.",
+        "Since this was a year long process, the team's dynamic changed quite frequently as at that age, small disagreements and struggles can be magnified. Young students may also be shy in asking for help even when they need it. To counter this, I spent extra time before and after meetups talking to every student to get to know them and build trust. Overtime, even the most quiet student was willing to pull me aside to bring up any issues she had.",
       ],
     },
     {
@@ -72,10 +61,10 @@ export function WorkExperience() {
       link: "https://www.markham.ca",
       title: "Computer Instructor",
       location: "Markham, Canada",
-      subtitle: "NXT Robotics, Arduino, Java, Python",
+      subtitle: "NXT Robotics, Java, Python",
       description: [
-        "Right from a young age, I aspired to learn more about possibilities technology can bring to people. By working as a computer instructor, I was able to share my passion for technology, especially robotics and circuitry, with not just children of all ages, but also some adults who share that interest I have.",
-        "As an instructor for both children and adults, I taught a variety of topics from hardware skills such as robotics and design to software skills such as programming",
+        "Right from a young age, I aspired to learn more about possibilities technology can bring. By working as a computer instructor, I was able to share my passion for technology, especially about robotics and circuitry, with not just children, but also some adults who attended our classes at community centres.",
+        "During those years, I taught a variety of topics ranging from hardware skills such as building robots to software skills such as programming",
       ],
     },
   ];

@@ -1,6 +1,5 @@
 import Container from "react-bootstrap/Container";
 import reactImg from "../../assets/projects/react.svg";
-import rpiImg from "../../assets/projects/rpi.png";
 import swImg from "../../assets/projects/sw.png";
 import xcodeImg from "../../assets/projects/xcode.png";
 import { IPart } from "../reusable/Part";
@@ -15,10 +14,10 @@ export function Projects() {
       link: "https://itunes.apple.com/app/id1449888784/",
       title: "iOS App Development",
       location: "St. Augustine Catholic High School",
-      subtitle: "Swift, Objective-C, XCode, Firebase",
+      subtitle: "Swift, Objective-C, XCode, Firebase Database",
       description: [
-        "Starting from zero knowledge of Swift and app development, I self-taught myself everything required to create a successful app.",
-        "In order to properly support the entire school, we had to ensure both the Android and iOS apps have the same UI and functionality. Using the Agile approach to development, I was able to coordinate with the team and our principal to ensure the app was a success. Through mediums like Slack and emailing the student body, our team cooperated and fulfilled the requests of our student body.",
+        "Starting from zero knowledge of Swift and app development, I self-taught myself all knowledge required to create, launch, and maintain a successful app.",
+        "To properly support the entire school, we had to ensure both the Android and iOS apps maintained the same UI and functionality. Using the Agile approach to development, I was able to coordinate with the team and our principal to ensure the app was a success. Through mediums like Slack and polling the student body, our team cooperated and fulfilled the requests of our entire school.",
       ],
     },
     {
@@ -26,19 +25,10 @@ export function Projects() {
       title: "React Website",
       link: "https://github.com/kmiu2/kenny-miu-website",
       linkText: "View Code",
-      subtitle: "ReactJS, Bootstrap, npm, CSS, HTML",
+      subtitle: "Typescript, ReactJS, CSS",
       description: [
-        "Using React, I was able to create several quick and responsive SPAs such as this website. By using React Router and the SPA architecture, this website is able to instantly switch between sub pages.",
-        "This website is also mobile friendly! It will change and show a sidebar whenever the width hits a certain threshold.",
-      ],
-    },
-    {
-      img: rpiImg,
-      title: "Raspberry Pi Projects",
-      subtitle: "Raspberry Pi 3",
-      description: [
-        "During my free time, I worked on several Raspberry Pi Projects. Since I enjoy working with these small single board computers, these projects range from pure entertainment to practical applications",
-        "On the entertainment side, my projects include creating digital clocks and daily information displays. For more practical projects, I used the raspberry pi and spare drives to create a NAS.",
+        "Using React, I was able to create a quick and responsive website. By using React Router and the SPA architecture, my site is able to instantly switch between sub pages.",
+        "This website is also mobile snd dark mode friendly! It will change and show a sidebar whenever the width hits a certain threshold. The dark mode toggle will use the device's theme at first, but can be toggled to show light/dark themes on all subsequent visits.",
       ],
     },
     {
