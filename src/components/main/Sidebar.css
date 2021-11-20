@@ -54,7 +54,6 @@
   right: -100%;
   transition: 850ms;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   transition: background-color var(--transitionTime) ease;
 }
