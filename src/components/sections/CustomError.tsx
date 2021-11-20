@@ -13,7 +13,7 @@ export function CustomError() {
       </NavLink>
       <Spacer height={15} />
       <div>Enjoy this bunny I drew in the meanwhile</div>
-      <Image className="errorImage" src={bunnyImg} alt="404 wizard" />
+      <Image className="errorImage" src={bunnyImg} alt="404 bunny" />
     </Jumbotron>
   );
 }

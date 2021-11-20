@@ -64,7 +64,7 @@ export function WorkExperience() {
       subtitle: "NXT Robotics, Java, Python",
       description: [
         "Right from a young age, I aspired to learn more about possibilities technology can bring. By working as a computer instructor, I was able to share my passion for technology, especially about robotics and circuitry, with not just children, but also some adults who attended our classes at community centres.",
-        "During those years, I taught a variety of topics ranging from hardware skills such as building robots to software skills such as programming",
+        "During those years, I taught a variety of topics ranging from hardware skills such as building robots to software skills such as programming.",
       ],
     },
   ];
