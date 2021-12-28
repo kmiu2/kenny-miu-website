@@ -1,4 +1,5 @@
 import Container from "react-bootstrap/Container";
+import applyboardImg from "../../assets/workExperience/applyboard.png";
 import firstRoboticsImg from "../../assets/workExperience/first_robotics.png";
 import honeybeeLogoImg from "../../assets/workExperience/honeybee.svg";
 import markhamImg from "../../assets/workExperience/markham.png";
@@ -9,14 +10,26 @@ import { Section } from "../reusable/Section";
 export function WorkExperience() {
   const parts: IPart[] = [
     {
+      date: "Jan 2022 - Apr 2022",
+      img: applyboardImg,
+      link: "https://www.applyboard.com/",
+      title: "Full Stack Developer",
+      location: "Kitchener, Canada",
+      subtitle: "Python, Ruby, JavaScript",
+      description: [
+        "ApplyBoard simplifies the study abroad search, application, and acceptance process by connecting international students, recruitment partners, and academic institutions on one platform. Founded in 2015 by brothers Martin, Meti, and Massi Basiri, we've built partnerships with 1,500+ primary, secondary, and post-secondary educational institutions, and work with 7,500+ recruitment partners to drive diversity on campuses across Canada, the United States, the United Kingdom, and Australia.",
+      ],
+    },
+    {
       date: "Sep 2021 - Dec 2021",
       img: polarImg,
       link: "https://polar.me/",
       title: "Full Stack Developer",
       location: "Toronto, Canada",
-      subtitle: "React, Redux, JavaScript, Python, Django, Jest",
+      subtitle: "React, Redux, JavaScript, Django, Python, Jest ",
       description: [
-        "Polar is a creative advertising technology company which works with hundreds of publishers in 20+ countries. Publishers use Polar to promote their direct-sold branded content on-site through native ad formats. Over 2,500 publisher sites have delivered over 100 billion direct-sold native ads using Polar over the past several years.",
+        "One of my first major projects at Polar was to help revamp the demo site list page and fix/add any associated unit tests. The old behaviour fetched all the demo sites in one call and then filtered them in React. By using pagination and a new Django REST endpoint with search, sort, and page number parameters, I improved performance by over 1000%. Instead of timing out at over 30s+, the new functionality finishes in under 3s.",
+        "Near the end of the term, I worked on a feature where after a user crops an image for an ad format, the preview tool would switch to the respective format. At first, this seemed like a simple change, but after looking at the code, the preview tool format was stored in a local state. Since the image crop component and the preview tool component were in two different trees, I had to migrate the state to Redux as well as add the Redux actions to switch the format. While the migration took a bit of work, most of my time was spent fixing the old unit tests and adding in new ones.",
       ],
     },
     {
