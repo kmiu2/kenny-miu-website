@@ -17,3 +17,34 @@
 .homeNavCollapse {
   justify-content: end;
 }
+
+.navLink {
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.navLink:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.skipNavigationButton {
+  border: 2.5px solid white;
+  background-color: transparent;
+  border-radius: 0;
+  min-width: 275px;
+  width: 10%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  top: 7.5px;
+  left: 7.5px;
+  position: absolute;
+  transform: translateY(-120%);
+}
+.skipNavigationButton:focus {
+  transform: translateY(0);
+}
+.skipNavigationButton:hover {
+  color: var(--hoverColor);
+  background-color: transparent;
+  border-color: var(--hoverColor);
+}

@@ -1,3 +1,4 @@
+import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useMediaQuery } from "react-responsive";
@@ -57,11 +58,9 @@ export function App() {
         <Navbar className="homeNav" variant="dark" expand="lg">
           <Nav>
             {navLinks.map((link: IURLLink) => (
-              <Nav.Link key={link.path}>
-                <NavLink className="nav-link" to={link.path}>
-                  {link.text}
-                </NavLink>
-              </Nav.Link>
+              <NavLink className="navLink" to={link.path}>
+                {link.text}
+              </NavLink>
             ))}
           </Nav>
           <Navbar.Collapse className="homeNavCollapse">
@@ -74,20 +73,25 @@ export function App() {
 
   return (
     <div className="appWrapper" data-theme={theme}>
+      <Button className="skipNavigationButton" href="#mainContent">
+        Skip Navigation
+      </Button>
       <Home />
       {renderNavbar(urlLinks)}
       {isMobile && <Sidebar theme={theme} setTheme={setTheme} />}
-      <div className={isMobile ? "mobilePadding" : "desktopPadding"}>
-        <Switch location={location}>
-          <Route path="/" component={WorkExperience} exact />
-          <Route path="/work-experience" component={WorkExperience} />
-          <Route path="/education" component={Education} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/showcase" component={Showcase} />
-          <Route path="/*" component={CustomError} />
-        </Switch>
-        <Contact />
-      </div>
+      <main id="mainContent">
+        <div className={isMobile ? "mobilePadding" : "desktopPadding"}>
+          <Switch location={location}>
+            <Route path="/" component={WorkExperience} exact />
+            <Route path="/work-experience" component={WorkExperience} />
+            <Route path="/education" component={Education} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/showcase" component={Showcase} />
+            <Route path="/*" component={CustomError} />
+          </Switch>
+          <Contact />
+        </div>
+      </main>
     </div>
   );
 }

@@ -10,7 +10,8 @@ export function Social(props: { fillColour?: string }) {
   return (
     <ButtonToolbar className="buttonToolbar">
       <Button
-        variant="outline-link"
+        aria-label="GitHub"
+        className="socialButton"
         href="https://www.github.com/kmiu2/"
         target="_blank"
       >
@@ -22,7 +23,8 @@ export function Social(props: { fillColour?: string }) {
         />
       </Button>
       <Button
-        variant="outline-link"
+        aria-label="LinkedIn"
+        className="socialButton"
         href="https://www.linkedin.com/in/kennymiu/"
         target="_blank"
       >

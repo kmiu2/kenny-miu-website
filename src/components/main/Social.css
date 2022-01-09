@@ -1,6 +1,13 @@
 .buttonToolbar {
   filter: grayscale(25%);
 }
+.socialButton {
+  background-color: transparent;
+  border: 0;
+}
+.socialButton:hover {
+  background-color: transparent;
+}
 .iconLink:hover {
   fill: var(--hoverColor);
 }
