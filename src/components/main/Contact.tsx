@@ -55,5 +55,9 @@ export function Contact() {
     ));
   };
 
-  return <div className="contactWrapper">{renderRows(contactInfo)}</div>;
+  return (
+    <div className={isMobile ? "contactWrapper mobile" : "contactWrapper"}>
+      {renderRows(contactInfo)}
+    </div>
+  );
 }
