@@ -27,7 +27,7 @@ export function Projects() {
       subtitle: "Typescript, ReactJS, CSS",
       description: [
         "Using React, I was able to create a quick and responsive website. By using React Router and the SPA architecture, my site is able to instantly switch between sub pages.",
-        "This website is also mobile snd dark mode friendly! It will change and show a sidebar whenever the width hits a certain threshold. The dark mode toggle will use the device's theme at first, but can be toggled to show light/dark themes on all subsequent visits.",
+        "This website is also mobile, dark mode, and accessibility friendly! It will change and show a sidebar whenever the width hits a certain threshold. The dark mode toggle will use the device's theme at first, but can be toggled to show light/dark themes on all subsequent visits. For accessibility, all buttons are labeled or aria-labeled and the skip navigation button can be accessed via keyboard navigation.",
         "In addition, it is also a Progressive Web App and follows all of the best practices for a web page as outlined by Google (Try running Lighthouse!).",
       ],
     },
