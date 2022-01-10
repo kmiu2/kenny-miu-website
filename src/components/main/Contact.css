@@ -1,5 +1,5 @@
 .contactWrapper {
-  padding: 30px;
+  padding: 25px 45px;
   background-color: var(--contactBackground);
   transition: background-color var(--transitionTime) ease;
 }

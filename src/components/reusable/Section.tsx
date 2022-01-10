@@ -1,5 +1,4 @@
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useMediaQuery } from "react-responsive";
 import { IPart, Part } from "./Part";
@@ -21,7 +20,7 @@ export function Section(props: { parts: IPart[] }) {
 
       if (columnsPerRow === 1) {
         rows.push(
-          <Row key={index} noGutters>
+          <Row key={index} className="sectionRow">
             <Col className={isLastRow ? "colRight bottom" : "colRight"}>
               <Part part={part} />
             </Col>
@@ -30,7 +29,7 @@ export function Section(props: { parts: IPart[] }) {
       } else {
         const isLastRow = index >= parts.length - 2;
         rows.push(
-          <Row key={index} noGutters>
+          <Row key={index} className="sectionRow">
             <Col className={isLastRow ? "colLeft bottom" : "colLeft"}>
               <Part part={part} />
             </Col>
@@ -46,9 +45,5 @@ export function Section(props: { parts: IPart[] }) {
     return rows;
   };
 
-  return (
-    <Container className="sectionWrapper" fluid="xl">
-      {renderRows(parts)}
-    </Container>
-  );
+  return <div className="sectionWrapper">{renderRows(parts)}</div>;
 }

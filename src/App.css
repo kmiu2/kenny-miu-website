@@ -13,6 +13,7 @@
 .homeNav {
   background-color: var(--homeNavBackground);
   transition: background-color var(--transitionTime) ease;
+  padding: 8px 16px;
 }
 .homeNavCollapse {
   justify-content: end;
@@ -21,10 +22,11 @@
 .navLink {
   padding: 16px;
   color: rgba(255, 255, 255, 0.5);
-}
-.navLink:hover {
-  color: white;
   text-decoration: none;
+}
+.navLink:hover,
+.navLink:focus {
+  color: white;
 }
 
 .skipNavigationButton {
@@ -42,6 +44,9 @@
 }
 .skipNavigationButton:focus {
   transform: translateY(0);
+  color: var(--hoverColor);
+  background-color: transparent;
+  border-color: var(--hoverColor);
 }
 .skipNavigationButton:hover {
   color: var(--hoverColor);

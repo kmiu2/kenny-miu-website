@@ -4,15 +4,20 @@
   transition: background-color var(--transitionTime) ease;
   transition: color var(--transitionTime) ease;
 }
+.sectionRow {
+  margin: 0;
+}
 .colLeft {
   border-right: 2px solid var(--sectionDivider);
   border-bottom: 2px solid var(--sectionDivider);
+  padding: 0;
 }
 .colLeft.bottom {
   border-bottom: none;
 }
 .colRight {
   border-bottom: 2px solid var(--sectionDivider);
+  padding: 0;
 }
 .colRight.bottom {
   border-bottom: none;

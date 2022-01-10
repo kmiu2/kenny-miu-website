@@ -16,13 +16,13 @@ export function ThemeSwitch(props: { theme: string; setTheme: any }) {
     >
       <Form>
         <Form.Check
-          className="themeToggle"
+          className={isMobile ? "themeToggle mobile" : "themeToggle"}
           type="switch"
           id="themeToggle"
           aria-label="dark mode toggle"
           label={theme === "dark" ? "☾" : "☀"}
           checked={theme === "dark"}
-          onClick={switchTheme}
+          onChange={switchTheme}
         />
       </Form>
     </div>

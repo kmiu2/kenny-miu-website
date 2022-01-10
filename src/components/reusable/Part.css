@@ -2,6 +2,7 @@
   background-color: transparent;
   text-align: center;
   height: 100%;
+  padding: 64px 32px;
 }
 
 .image {
@@ -43,7 +44,8 @@
   color: inherit;
   display: inline;
 }
-.partLink:hover {
+.partLink:hover,
+.partLink:focus {
   color: var(--hoverColor);
 }
 .partLink.inactive {
@@ -59,7 +61,8 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.partButton:hover {
+.partButton:hover,
+.partButton:focus {
   color: var(--hoverColor);
   background-color: transparent;
   border-color: var(--hoverColor);

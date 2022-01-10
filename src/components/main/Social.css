@@ -5,9 +5,11 @@
   background-color: transparent;
   border: 0;
 }
-.socialButton:hover {
+.socialButton:hover,
+.socialButton:focus {
   background-color: transparent;
 }
-.iconLink:hover {
+.iconLink:hover,
+.iconLink:focus {
   fill: var(--hoverColor);
 }

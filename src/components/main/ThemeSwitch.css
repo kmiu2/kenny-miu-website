@@ -10,12 +10,20 @@
 
 .themeToggle {
   width: 50px;
-  margin: 10px;
+  margin: 0px 20px;
   font-size: 18px;
   color: rgb(255, 123, 0);
   border-color: var(--hoverColor);
 }
-.custom-control-input:checked ~ .custom-control-label::before {
+.themeToggle.mobile {
+  margin: 0px 10px;
+}
+
+* .form-switch .form-check-input {
+  width: 35px;
+  margin-top: 4px;
+}
+* .form-check-input:checked {
   color: white;
   border-color: var(--hoverColor);
   background-color: var(--hoverColor);

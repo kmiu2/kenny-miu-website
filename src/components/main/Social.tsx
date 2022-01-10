@@ -14,6 +14,7 @@ export function Social(props: { fillColour?: string }) {
         className="socialButton"
         href="https://www.github.com/kmiu2/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <GitHubIcon
           className="iconLink"
@@ -27,6 +28,7 @@ export function Social(props: { fillColour?: string }) {
         className="socialButton"
         href="https://www.linkedin.com/in/kennymiu/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <LinkedInIcon
           className="iconLink"

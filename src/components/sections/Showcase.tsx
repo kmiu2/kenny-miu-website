@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import carImg from "../../assets/showcase/car.png";
 import doggoImg from "../../assets/showcase/doggo.jpg";
 import nanoSweaterImg from "../../assets/showcase/nano_sweater.jpg";
@@ -49,9 +48,5 @@ export function Showcase() {
     },
   ];
 
-  return (
-    <Container fluid="xl">
-      <Section parts={parts} />
-    </Container>
-  );
+  return <Section parts={parts} />;
 }

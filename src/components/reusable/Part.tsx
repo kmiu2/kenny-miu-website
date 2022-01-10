@@ -1,6 +1,5 @@
 import { Button } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import NavLink from "react-bootstrap/NavLink";
 import "./Part.css";
 
@@ -38,13 +37,14 @@ export function Part(props: { part: IPart }) {
   };
 
   return (
-    <Jumbotron className="partWrapper">
+    <div className="partWrapper">
       {date && <div className="dateText">{date}</div>}
       <div className="titleText">
         <NavLink
           className={link ? "partLink" : "partLink inactive"}
           href={link}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {title}
         </NavLink>
@@ -58,10 +58,15 @@ export function Part(props: { part: IPart }) {
       {subtitle && <div className="subtitleText">{subtitle}</div>}
       {renderDescription(description)}
       {link && (
-        <Button className="partButton" href={link} target="_blank">
+        <Button
+          className="partButton"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {linkText ?? "Website"}
         </Button>
       )}
-    </Jumbotron>
+    </div>
   );
 }

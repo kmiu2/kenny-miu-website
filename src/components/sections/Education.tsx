@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import staLogoImg from "../../assets/education/sta_icon.svg";
 import uwLogoImg from "../../assets/education/uw_icon.svg";
 import { IPart } from "../reusable/Part";
@@ -31,9 +30,5 @@ export function Education() {
     },
   ];
 
-  return (
-    <Container fluid="xl">
-      <Section parts={parts} />
-    </Container>
-  );
+  return <Section parts={parts} />;
 }

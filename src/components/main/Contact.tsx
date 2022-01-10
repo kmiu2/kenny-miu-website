@@ -1,4 +1,4 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import "./Contact.css";
 import { Social } from "./Social";
@@ -36,7 +36,7 @@ export function Contact() {
   const renderRows = (contactInfo: IContactInfo[]) => {
     return contactInfo.map((info, index) => (
       <div key={info.text}>
-        <Row noGutters>
+        <Row>
           <Col className="contactLeftCol" xs={isMobile ? 4 : 2}>
             {info.text}
           </Col>
@@ -55,9 +55,5 @@ export function Contact() {
     ));
   };
 
-  return (
-    <div className="contactWrapper">
-      <Container fluid="xl">{renderRows(contactInfo)}</Container>
-    </div>
-  );
+  return <div className="contactWrapper">{renderRows(contactInfo)}</div>;
 }

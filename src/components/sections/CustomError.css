@@ -5,13 +5,20 @@
   margin-bottom: 0;
   transition: background-color var(--transitionTime) ease;
   transition: color var(--transitionTime) ease;
+  padding: 2rem 1rem;
 }
 .errorText {
   font-size: 1.75rem;
 }
 .errorButton {
-  display: block;
-  padding: 0.5rem;
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: underline;
+  color: var(--sectionText);
+}
+.errorButton:hover,
+.errorButton:focus {
+  color: var(--hoverColor);
 }
 
 .errorImage {

@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import reactImg from "../../assets/projects/react.svg";
 import swImg from "../../assets/projects/sw.png";
 import xcodeImg from "../../assets/projects/xcode.png";
@@ -42,9 +41,5 @@ export function Projects() {
     },
   ];
 
-  return (
-    <Container fluid="xl">
-      <Section parts={parts} />
-    </Container>
-  );
+  return <Section parts={parts} />;
 }

@@ -10,9 +10,9 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.1.0",
     "react": "^16.14.0",
-    "react-bootstrap": "^1.5.2",
+    "react-bootstrap": "^2.1.0",
     "react-dom": "^16.14.0",
     "react-icons": "^4.2.0",
     "react-responsive": "^8.2.0",

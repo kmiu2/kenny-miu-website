@@ -1,8 +1,8 @@
-.jumbotronWrapper {
+.homeWrapper {
   background-color: transparent;
   color: white;
   text-align: center;
-  padding-bottom: 0;
+  padding: 2rem 1rem;
 }
 
 .nameHeader {
@@ -38,7 +38,8 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-.homeButton:hover {
+.homeButton:hover,
+.homeButton:focus {
   color: var(--hoverColor);
   background-color: transparent;
   border-color: var(--hoverColor);

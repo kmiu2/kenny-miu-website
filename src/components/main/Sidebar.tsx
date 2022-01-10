@@ -36,10 +36,10 @@ export function Sidebar(props: { theme: string; setTheme: any }) {
         Menu
       </Button>
       <div
-        className={sidebarActive ? "navOverlay active" : "navOverlay"}
+        className={sidebarActive ? "navOverlay active" : "navOverlay inactive"}
         onClick={toggleSidebar}
       />
-      <div className={sidebarActive ? "navMenu active" : "navMenu"}>
+      <div className={sidebarActive ? "navMenu active" : "navMenu inactive"}>
         <ul className="navMenuItems" onClick={toggleSidebar}>
           <li className="navbarToggle">
             <AiOutlineClose size={22} />

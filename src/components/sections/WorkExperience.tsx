@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import applyboardImg from "../../assets/workExperience/applyboard.png";
 import firstRoboticsImg from "../../assets/workExperience/first_robotics.png";
 import honeybeeLogoImg from "../../assets/workExperience/honeybee.svg";
@@ -82,9 +81,5 @@ export function WorkExperience() {
     },
   ];
 
-  return (
-    <Container fluid="xl">
-      <Section parts={parts} />
-    </Container>
-  );
+  return <Section parts={parts} />;
 }

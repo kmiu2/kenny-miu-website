@@ -58,7 +58,7 @@ export function App() {
         <Navbar className="homeNav" variant="dark" expand="lg">
           <Nav>
             {navLinks.map((link: IURLLink) => (
-              <NavLink className="navLink" to={link.path}>
+              <NavLink key={link.path} className="navLink" to={link.path}>
                 {link.text}
               </NavLink>
             ))}
