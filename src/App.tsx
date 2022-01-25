@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useMediaQuery } from "react-responsive";
-import { NavLink, Route, Switch, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import "./App.css";
 import { Contact } from "./components/main/Contact";
@@ -81,14 +81,14 @@ export function App() {
       {isMobile && <Sidebar theme={theme} setTheme={setTheme} />}
       <main id="mainContent">
         <div className={isMobile ? "mobilePadding" : "desktopPadding"}>
-          <Switch location={location}>
-            <Route path="/" component={WorkExperience} exact />
-            <Route path="/work-experience" component={WorkExperience} />
-            <Route path="/education" component={Education} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/showcase" component={Showcase} />
-            <Route path="/*" component={CustomError} />
-          </Switch>
+          <Routes location={location}>
+            <Route path="/" element={<WorkExperience />} />
+            <Route path="work-experience" element={<WorkExperience />} />
+            <Route path="education" element={<Education />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="showcase" element={<Showcase />} />
+            <Route path="/*" element={<CustomError />} />
+          </Routes>
           <Contact />
         </div>
       </main>
