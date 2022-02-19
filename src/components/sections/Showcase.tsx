@@ -1,5 +1,5 @@
 import carImg from "../../assets/showcase/car.png";
-import doggoImg from "../../assets/showcase/doggo.jpg";
+import gooseImg from "../../assets/showcase/goose.jpg";
 import nanoSweaterImg from "../../assets/showcase/nano_sweater.jpg";
 import trampolineImg from "../../assets/showcase/trampoline.jpg";
 import { IPart } from "../reusable/Part";
@@ -9,13 +9,15 @@ export function Showcase() {
   const parts: IPart[] = [
     {
       spotlight: true,
-      img: doggoImg,
+      img: gooseImg,
       link: "https://www.instagram.com/everlasting_blizzart/",
       linkText: "Instagram Art Account",
-      title: "Dog Drawing",
+      title: "Goose Contest Drawing",
       subtitle: "Procreate",
       description: [
-        "During my free time, I like to explore my creative side by drawing. For example, this is my drawing of a cute dog. At first, I drew buildings and landscapes, but lately have moved more to drawing characters and animals. All my other art can be found on instagram.",
+        "During my free time, I like to explore my creative side by drawing or making music. For example, this is my entry for a goose design contest. We could only use a max of four colours (excluding background), so this restriction challenged me to think about different ways to simplify a goose down to its core colours.",
+        "When I first started drawing, I drew buildings and landscapes, but lately have moved more to drawing characters and animals. All my other art can be found on instagram.",
+        "I've recently also started to look into making music as well. My SoundCloud link can be found on the account as well.",
       ],
     },
     {
