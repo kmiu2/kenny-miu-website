@@ -1,8 +1,8 @@
-import reactImg from '../../assets/projects/react.svg';
-import swImg from '../../assets/projects/sw.png';
-import xcodeImg from '../../assets/projects/xcode.png';
-import { IPart } from '../reusable/Part';
-import { Section } from '../reusable/Section';
+import reactImg from '../../assets/projects/react.svg'
+import swImg from '../../assets/projects/sw.png'
+import xcodeImg from '../../assets/projects/xcode.png'
+import { IPart } from '../reusable/Part'
+import { Section } from '../reusable/Section'
 
 export function Projects() {
   const parts: IPart[] = [
@@ -40,7 +40,7 @@ export function Projects() {
         'When creating assemblies, I used the physical dynamics function of SolidWorks to simulate real life scenarios and account for stress, friction, and similar dynamics.',
       ],
     },
-  ];
+  ]
 
-  return <Section parts={parts} />;
+  return <Section parts={parts} />
 }

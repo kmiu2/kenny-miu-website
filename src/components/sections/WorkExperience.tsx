@@ -1,10 +1,10 @@
-import applyboardImg from '../../assets/workExperience/applyboard.png';
-import firstRoboticsImg from '../../assets/workExperience/first_robotics.png';
-import honeybeeLogoImg from '../../assets/workExperience/honeybee.svg';
-import markhamImg from '../../assets/workExperience/markham.png';
-import polarImg from '../../assets/workExperience/polar.png';
-import { IPart } from '../reusable/Part';
-import { Section } from '../reusable/Section';
+import applyboardImg from '../../assets/workExperience/applyboard.png'
+import firstRoboticsImg from '../../assets/workExperience/first_robotics.png'
+import honeybeeLogoImg from '../../assets/workExperience/honeybee.svg'
+import markhamImg from '../../assets/workExperience/markham.png'
+import polarImg from '../../assets/workExperience/polar.png'
+import { IPart } from '../reusable/Part'
+import { Section } from '../reusable/Section'
 
 export function WorkExperience() {
   const parts: IPart[] = [
@@ -80,7 +80,7 @@ export function WorkExperience() {
         'During those years, I taught a variety of topics ranging from hardware skills such as building robots to software skills such as programming.',
       ],
     },
-  ];
+  ]
 
-  return <Section parts={parts} />;
+  return <Section parts={parts} />
 }

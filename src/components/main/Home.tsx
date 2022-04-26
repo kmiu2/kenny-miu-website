@@ -1,11 +1,11 @@
-import Button from 'react-bootstrap/Button';
-import { useMediaQuery } from 'react-responsive';
-import meImage from '../../assets/base/me.jpg';
-import { Spacer } from '../reusable/Spacer';
-import './Home.css';
+import Button from 'react-bootstrap/Button'
+import { useMediaQuery } from 'react-responsive'
+import meImage from '../../assets/base/me.jpg'
+import { Spacer } from '../reusable/Spacer'
+import './Home.css'
 
 export function Home() {
-  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   return (
     <div className="homeWrapper">
@@ -26,5 +26,5 @@ export function Home() {
         Resume
       </Button>
     </div>
-  );
+  )
 }

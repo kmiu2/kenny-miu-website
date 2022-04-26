@@ -1,14 +1,14 @@
-import { Form } from 'react-bootstrap';
-import { useMediaQuery } from 'react-responsive';
-import './ThemeSwitch.css';
+import { Form } from 'react-bootstrap'
+import { useMediaQuery } from 'react-responsive'
+import './ThemeSwitch.css'
 
 export function ThemeSwitch(props: { theme: string; setTheme: any }) {
-  const { theme, setTheme } = props;
-  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+  const { theme, setTheme } = props
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
   const switchTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   return (
     <div
@@ -26,5 +26,5 @@ export function ThemeSwitch(props: { theme: string; setTheme: any }) {
         />
       </Form>
     </div>
-  );
+  )
 }

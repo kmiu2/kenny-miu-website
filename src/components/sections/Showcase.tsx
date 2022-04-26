@@ -1,9 +1,9 @@
-import carImg from '../../assets/showcase/car.png';
-import gooseImg from '../../assets/showcase/goose.jpg';
-import nanoSweaterImg from '../../assets/showcase/nano_sweater.jpg';
-import trampolineImg from '../../assets/showcase/trampoline.jpg';
-import { IPart } from '../reusable/Part';
-import { Section } from '../reusable/Section';
+import carImg from '../../assets/showcase/car.png'
+import gooseImg from '../../assets/showcase/goose.jpg'
+import nanoSweaterImg from '../../assets/showcase/nano_sweater.jpg'
+import trampolineImg from '../../assets/showcase/trampoline.jpg'
+import { IPart } from '../reusable/Part'
+import { Section } from '../reusable/Section'
 
 export function Showcase() {
   const parts: IPart[] = [
@@ -48,7 +48,7 @@ export function Showcase() {
         'I was challenged to design a trampoline appropriate for children. By adding walls and as well a large mat for the trampoline, this design ensures that any child playing on this trampoline would be safe while having fun.',
       ],
     },
-  ];
+  ]
 
-  return <Section parts={parts} />;
+  return <Section parts={parts} />
 }

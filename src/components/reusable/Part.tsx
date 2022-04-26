@@ -1,18 +1,18 @@
-import { Button } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image';
-import NavLink from 'react-bootstrap/NavLink';
-import './Part.css';
+import { Button } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
+import NavLink from 'react-bootstrap/NavLink'
+import './Part.css'
 
 export interface IPart {
-  date?: string;
-  description: string[];
-  img: string;
-  link?: string;
-  linkText?: string;
-  location?: string;
-  spotlight?: boolean;
-  subtitle?: string;
-  title: string;
+  date?: string
+  description: string[]
+  img: string
+  link?: string
+  linkText?: string
+  location?: string
+  spotlight?: boolean
+  subtitle?: string
+  title: string
 }
 
 export function Part(props: { part: IPart }) {
@@ -26,15 +26,15 @@ export function Part(props: { part: IPart }) {
     spotlight,
     subtitle,
     title,
-  } = props.part;
+  } = props.part
 
-  const renderDescription = (description: string[]) => {
-    return description.map((text) => (
+  const renderDescription = (data: string[]) => {
+    return data.map((text) => (
       <div className="descriptionText" key={text}>
         {text}
       </div>
-    ));
-  };
+    ))
+  }
 
   return (
     <div className="partWrapper">
@@ -68,5 +68,5 @@ export function Part(props: { part: IPart }) {
         </Button>
       )}
     </div>
-  );
+  )
 }

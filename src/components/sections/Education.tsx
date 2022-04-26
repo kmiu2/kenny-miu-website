@@ -1,7 +1,7 @@
-import staLogoImg from '../../assets/education/sta_icon.svg';
-import uwLogoImg from '../../assets/education/uw_icon.svg';
-import { IPart } from '../reusable/Part';
-import { Section } from '../reusable/Section';
+import staLogoImg from '../../assets/education/sta_icon.svg'
+import uwLogoImg from '../../assets/education/uw_icon.svg'
+import { IPart } from '../reusable/Part'
+import { Section } from '../reusable/Section'
 
 export function Education() {
   const parts: IPart[] = [
@@ -28,7 +28,7 @@ export function Education() {
         'St. Augustine CHS prides itself on a strong integration of technology in the school curricula. Our innovative Laptop Learning Program provides a rich opportunity for many of our students to enhance, extend and apply their learning using state of the art laptops in their core subject areas. Our school has many SMARTboards and teachers who integrate their lessons using this technology and others to provide meaningful and engaging learning experiences for our students.',
       ],
     },
-  ];
+  ]
 
-  return <Section parts={parts} />;
+  return <Section parts={parts} />
 }
