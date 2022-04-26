@@ -1,18 +1,18 @@
-import { Button } from "react-bootstrap";
-import Image from "react-bootstrap/Image";
-import NavLink from "react-bootstrap/NavLink";
-import "./Part.css";
+import { Button } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
+import NavLink from 'react-bootstrap/NavLink'
+import './Part.css'
 
 export interface IPart {
-  date?: string;
-  description: string[];
-  img: string;
-  link?: string;
-  linkText?: string;
-  location?: string;
-  spotlight?: boolean;
-  subtitle?: string;
-  title: string;
+  date?: string
+  description: string[]
+  img: string
+  link?: string
+  linkText?: string
+  location?: string
+  spotlight?: boolean
+  subtitle?: string
+  title: string
 }
 
 export function Part(props: { part: IPart }) {
@@ -26,22 +26,22 @@ export function Part(props: { part: IPart }) {
     spotlight,
     subtitle,
     title,
-  } = props.part;
+  } = props.part
 
-  const renderDescription = (description: string[]) => {
-    return description.map((text) => (
+  const renderDescription = (data: string[]) => {
+    return data.map((text) => (
       <div className="descriptionText" key={text}>
         {text}
       </div>
-    ));
-  };
+    ))
+  }
 
   return (
     <div className="partWrapper">
       {date && <div className="dateText">{date}</div>}
       <div className="titleText">
         <NavLink
-          className={link ? "partLink" : "partLink inactive"}
+          className={link ? 'partLink' : 'partLink inactive'}
           href={link}
           target="_blank"
           rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export function Part(props: { part: IPart }) {
       </div>
       {location && <div className="locationText">{location}</div>}
       <Image
-        className={spotlight ? "image spotlight" : "image"}
+        className={spotlight ? 'image spotlight' : 'image'}
         src={img}
         alt={title}
       />
@@ -64,9 +64,9 @@ export function Part(props: { part: IPart }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {linkText ?? "Website"}
+          {linkText ?? 'Website'}
         </Button>
       )}
     </div>
-  );
+  )
 }

@@ -8,5 +8,15 @@
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
-  }
+  },
+  "cSpell.words": [
+    "amannn",
+    "applyboard",
+    "lcov",
+    "mooyoul",
+    "precache",
+    "precached",
+    "precaching",
+    "stylelint"
+  ]
 }
