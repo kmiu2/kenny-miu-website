@@ -1,7 +1,9 @@
-name: workflow
+name: Lint TS
+
 on: [push]
+
 jobs:
-  job:
+  ts-lint:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
