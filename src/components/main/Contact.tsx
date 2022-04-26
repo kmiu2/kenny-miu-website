@@ -1,7 +1,7 @@
-import { Col, Row } from "react-bootstrap";
-import { useMediaQuery } from "react-responsive";
-import "./Contact.css";
-import { Social } from "./Social";
+import { Col, Row } from 'react-bootstrap';
+import { useMediaQuery } from 'react-responsive';
+import './Contact.css';
+import { Social } from './Social';
 
 interface IContactInfo {
   text: string;
@@ -10,25 +10,25 @@ interface IContactInfo {
 }
 
 export function Contact() {
-  const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
 
   const contactInfo: IContactInfo[] = [
     {
-      text: "Location",
-      value: "Toronto, Canada",
+      text: 'Location',
+      value: 'Toronto, Canada',
     },
     {
-      text: "Phone",
-      value: "+1 (647) 863 1337",
-      link: "tel: +1 (647) 863 1337",
+      text: 'Phone',
+      value: '+1 (647) 863 1337',
+      link: 'tel: +1 (647) 863 1337',
     },
     {
-      text: "Email",
-      value: "kennymiu2@gmail.com",
-      link: "mailto: kennymiu2@gmail.com",
+      text: 'Email',
+      value: 'kennymiu2@gmail.com',
+      link: 'mailto: kennymiu2@gmail.com',
     },
     {
-      text: "Social",
+      text: 'Social',
       value: <Social fillColour="var(--contactTextRight)" />,
     },
   ];
@@ -56,7 +56,7 @@ export function Contact() {
   };
 
   return (
-    <div className={isMobile ? "contactWrapper mobile" : "contactWrapper"}>
+    <div className={isMobile ? 'contactWrapper mobile' : 'contactWrapper'}>
       {renderRows(contactInfo)}
     </div>
   );

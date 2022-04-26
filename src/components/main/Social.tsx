@@ -1,8 +1,8 @@
-import Button from "react-bootstrap/Button";
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
-import { ReactComponent as GitHubIcon } from "../../assets/social/github.svg";
-import { ReactComponent as LinkedInIcon } from "../../assets/social/linkedin.svg";
-import "./Social.css";
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import { ReactComponent as GitHubIcon } from '../../assets/social/github.svg';
+import { ReactComponent as LinkedInIcon } from '../../assets/social/linkedin.svg';
+import './Social.css';
 
 export function Social(props: { fillColour?: string }) {
   const { fillColour } = props;
@@ -18,7 +18,7 @@ export function Social(props: { fillColour?: string }) {
       >
         <GitHubIcon
           className="iconLink"
-          fill={fillColour ?? "white"}
+          fill={fillColour ?? 'white'}
           width="30"
           height="30"
         />
@@ -32,7 +32,7 @@ export function Social(props: { fillColour?: string }) {
       >
         <LinkedInIcon
           className="iconLink"
-          fill={fillColour ?? "white"}
+          fill={fillColour ?? 'white'}
           width="30"
           height="30"
         />

@@ -1,19 +1,19 @@
-import Button from "react-bootstrap/Button";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { useMediaQuery } from "react-responsive";
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
-import useLocalStorage from "use-local-storage";
-import "./App.css";
-import { Contact } from "./components/main/Contact";
-import { Home } from "./components/main/Home";
-import { Sidebar } from "./components/main/Sidebar";
-import { ThemeSwitch } from "./components/main/ThemeSwitch";
-import { CustomError } from "./components/sections/CustomError";
-import { Education } from "./components/sections/Education";
-import { Projects } from "./components/sections/Projects";
-import { Showcase } from "./components/sections/Showcase";
-import { WorkExperience } from "./components/sections/WorkExperience";
+import Button from 'react-bootstrap/Button';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { useMediaQuery } from 'react-responsive';
+import { NavLink, Route, Routes, useLocation } from 'react-router-dom';
+import useLocalStorage from 'use-local-storage';
+import './App.css';
+import { Contact } from './components/main/Contact';
+import { Home } from './components/main/Home';
+import { Sidebar } from './components/main/Sidebar';
+import { ThemeSwitch } from './components/main/ThemeSwitch';
+import { CustomError } from './components/sections/CustomError';
+import { Education } from './components/sections/Education';
+import { Projects } from './components/sections/Projects';
+import { Showcase } from './components/sections/Showcase';
+import { WorkExperience } from './components/sections/WorkExperience';
 
 interface IURLLink {
   text: string;
@@ -22,30 +22,30 @@ interface IURLLink {
 
 export const urlLinks: IURLLink[] = [
   {
-    text: "Work Experience",
-    path: "/work-experience",
+    text: 'Work Experience',
+    path: '/work-experience',
   },
   {
-    text: "Projects",
-    path: "/projects",
+    text: 'Projects',
+    path: '/projects',
   },
   {
-    text: "Education",
-    path: "/education",
+    text: 'Education',
+    path: '/education',
   },
   {
-    text: "Showcase",
-    path: "/showcase",
+    text: 'Showcase',
+    path: '/showcase',
   },
 ];
 
 export function App() {
   let location = useLocation();
-  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [theme, setTheme] = useLocalStorage(
-    "theme",
-    defaultDark ? "dark" : "light"
+    'theme',
+    defaultDark ? 'dark' : 'light'
   );
 
   const renderNavbar = (navLinks: IURLLink[]) => {
@@ -80,7 +80,7 @@ export function App() {
       {renderNavbar(urlLinks)}
       {isMobile && <Sidebar theme={theme} setTheme={setTheme} />}
       <main id="mainContent">
-        <div className={isMobile ? "mobilePadding" : "desktopPadding"}>
+        <div className={isMobile ? 'mobilePadding' : 'desktopPadding'}>
           <Routes location={location}>
             <Route path="/" element={<WorkExperience />} />
             <Route path="work-experience" element={<WorkExperience />} />

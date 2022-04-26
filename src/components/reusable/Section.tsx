@@ -1,12 +1,12 @@
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import { useMediaQuery } from "react-responsive";
-import { IPart, Part } from "./Part";
-import "./Section.css";
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import { useMediaQuery } from 'react-responsive';
+import { IPart, Part } from './Part';
+import './Section.css';
 
 export function Section(props: { parts: IPart[] }) {
   const { parts } = props;
-  const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' });
 
   const renderRows = (parts: IPart[]) => {
     const rows: any[] = [];
@@ -21,7 +21,7 @@ export function Section(props: { parts: IPart[] }) {
       if (columnsPerRow === 1) {
         rows.push(
           <Row key={index} className="sectionRow">
-            <Col className={isLastRow ? "colRight bottom" : "colRight"}>
+            <Col className={isLastRow ? 'colRight bottom' : 'colRight'}>
               <Part part={part} />
             </Col>
           </Row>
@@ -30,10 +30,10 @@ export function Section(props: { parts: IPart[] }) {
         const isLastRow = index >= parts.length - 2;
         rows.push(
           <Row key={index} className="sectionRow">
-            <Col className={isLastRow ? "colLeft bottom" : "colLeft"}>
+            <Col className={isLastRow ? 'colLeft bottom' : 'colLeft'}>
               <Part part={part} />
             </Col>
-            <Col className={isLastRow ? "colRight bottom" : "colRight"}>
+            <Col className={isLastRow ? 'colRight bottom' : 'colRight'}>
               {nextPart && <Part part={nextPart} />}
             </Col>
           </Row>

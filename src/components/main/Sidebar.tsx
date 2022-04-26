@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { NavLink } from "react-router-dom";
-import { urlLinks } from "../../App";
-import "./Sidebar.css";
-import { Social } from "./Social";
-import { ThemeSwitch } from "./ThemeSwitch";
+import { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { NavLink } from 'react-router-dom';
+import { urlLinks } from '../../App';
+import './Sidebar.css';
+import { Social } from './Social';
+import { ThemeSwitch } from './ThemeSwitch';
 
 export function Sidebar(props: { theme: string; setTheme: any }) {
   const { theme, setTheme } = props;
@@ -19,8 +19,8 @@ export function Sidebar(props: { theme: string; setTheme: any }) {
         setShouldShowShadow(false);
       }
     }
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, [shouldShowShadow]);
 
   const [sidebarActive, setSidebarActive] = useState(false);
@@ -29,17 +29,17 @@ export function Sidebar(props: { theme: string; setTheme: any }) {
   return (
     <div className="sidebarWrapper">
       <Button
-        className={shouldShowShadow ? "menuButton boxShadow" : "menuButton"}
+        className={shouldShowShadow ? 'menuButton boxShadow' : 'menuButton'}
         onClick={toggleSidebar}
       >
         <AiOutlineMenu className="menuIcon" />
         Menu
       </Button>
       <div
-        className={sidebarActive ? "navOverlay active" : "navOverlay inactive"}
+        className={sidebarActive ? 'navOverlay active' : 'navOverlay inactive'}
         onClick={toggleSidebar}
       />
-      <div className={sidebarActive ? "navMenu active" : "navMenu inactive"}>
+      <div className={sidebarActive ? 'navMenu active' : 'navMenu inactive'}>
         <ul className="navMenuItems" onClick={toggleSidebar}>
           <li className="navbarToggle">
             <AiOutlineClose size={22} />

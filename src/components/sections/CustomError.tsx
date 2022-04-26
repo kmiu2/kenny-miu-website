@@ -1,7 +1,7 @@
-import { Image } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import bunnyImg from "../../assets/base/bunny.png";
-import "./CustomError.css";
+import { Image } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import bunnyImg from '../../assets/base/bunny.png';
+import './CustomError.css';
 
 export function CustomError() {
   return (
