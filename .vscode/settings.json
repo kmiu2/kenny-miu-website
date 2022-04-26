@@ -9,5 +9,13 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "cSpell.words": ["applyboard"]
+  "cSpell.words": [
+    "amannn",
+    "applyboard",
+    "lcov",
+    "precache",
+    "precached",
+    "precaching",
+    "stylelint"
+  ]
 }
