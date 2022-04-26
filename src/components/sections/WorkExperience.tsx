@@ -14,9 +14,10 @@ export function WorkExperience() {
       link: "https://www.applyboard.com/",
       title: "Full Stack Developer",
       location: "Kitchener, Canada",
-      subtitle: "Python, Ruby, JavaScript",
+      subtitle: "React, NodeJS, Typescript, Cypress",
       description: [
-        "ApplyBoard simplifies the study abroad search, application, and acceptance process by connecting international students, recruitment partners, and academic institutions on one platform. Founded in 2015 by brothers Martin, Meti, and Massi Basiri, we've built partnerships with 1,500+ primary, secondary, and post-secondary educational institutions, and work with 7,500+ recruitment partners to drive diversity on campuses across Canada, the United States, the United Kingdom, and Australia.",
+        "At ApplyBoard, I worked on with the Recruitment Partner Journey Team to refractor a Student Bulk Import Page. I was tasked to refractor the bulk import page to use Styled components from the emotion library. In the process, I also improved state management as well as the overall performance of the page. I also added better csv file validation checks. In the end, I was able to reduce the lines of code by over 50%.",
+        "Another project I worked on was creating Cypress tests for the bulk import page as well as a student intake form. I added file uploading, drag and drop, and full form validation checks.",
       ],
     },
     {
