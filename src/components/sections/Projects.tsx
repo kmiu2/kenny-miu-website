@@ -10,7 +10,7 @@ export function Projects() {
       spotlight: true,
       date: 'Sept 2018 - June 2019',
       img: xcodeImg,
-      link: 'https://itunes.apple.com/app/id1449888784/',
+      link: 'https://app.staugustinechs.ca/',
       title: 'iOS App Development',
       location: 'St. Augustine Catholic High School',
       subtitle: 'Swift, Objective-C, XCode, Firebase Database',
