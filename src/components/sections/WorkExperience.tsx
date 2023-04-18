@@ -10,7 +10,7 @@ import { Section } from '../reusable/Section'
 export function WorkExperience() {
   const parts: IPart[] = [
     {
-      date: 'Jan 2023 - Apr 2023',
+      date: 'Jan 2023 - Aug 2023',
       img: smilecdrImg,
       link: 'https://www.smilecdr.com',
       title: 'Full Stack Developer',
