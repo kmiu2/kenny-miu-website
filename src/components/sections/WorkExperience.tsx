@@ -13,10 +13,12 @@ export function WorkExperience() {
       date: 'Jan 2023 - Aug 2023',
       img: smilecdrImg,
       link: 'https://www.smilecdr.com',
-      title: 'Full Stack Developer',
+      title: 'Frontend Developer',
       location: 'Toronto, Canada',
+      subtitle: 'Angular, Typescript, Cypress',
       description: [
-        "As a health technology company, Smile Digital Health's goal is to reduce barriers between information and care. We harness the power of open standards while building health IT solutions. Our data and integration platform fuels healthcare’s digital transformation by giving organizations the ability to meaningfully share health data. Healthcare advancement cannot happen without interoperability.",
+        'At Smile, I was on the Clinical Reasoning Group as a frontend developer. The main project I worked on was creating a new UI for the Smile backend. Previously, the company had no way to demonstrate their backend capabilities easily to potential clients. The UI included a page for running evaluations on clinical measures, building reports for the Quality Payment Program (QPP), and managing submissions to the Center for Medicare and Medicaid Services (CMS).',
+        'I created the entire codebase myself, including Gitlab pipelines, linting, and testing. I also wrote all the Cypress tests and kept code coverage over 95%.',
       ],
     },
     {
