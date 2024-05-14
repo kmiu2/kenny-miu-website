@@ -13,7 +13,7 @@ export function Home() {
         Kenny Miu
       </div>
       <div className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}>
-        Software Developer, Nanotechnology Engineer
+        Software Developer
       </div>
       <img className="imgWrapper" src={meImage} alt="me" />
       <Spacer height={25} />

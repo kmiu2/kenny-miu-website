@@ -9,7 +9,7 @@ export function Education() {
       date: 'Sept 2019 - April 2024',
       img: uwLogoImg,
       link: 'https://uwaterloo.ca/',
-      title: 'Nanotechnology Engineer Student',
+      title: 'Nanotechnology Engineering Student',
       location: 'University of Waterloo',
       description: [
         'Waterloo goes beyond the classroom, to a place where experience is the teacher. Beyond problems to solutions that address social, technical and economic needs. Beyond the laboratory, to the research that propels industries, organizations and society. Waterloo is at the forefront of innovation and is home to transformational research and inspired learning.',
