@@ -31,7 +31,6 @@
 .subtitleText {
   font-size: 1.45rem;
   font-weight: bold;
-  padding-bottom: 30px;
 }
 .descriptionText {
   font-size: 18px;
@@ -42,7 +41,9 @@
 
 .partLink {
   color: inherit;
-  display: inline;
+  display: flex;
+  justify-content: center;
+  transition: inherit;
 }
 .partLink:hover,
 .partLink:focus {
@@ -60,10 +61,52 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: inherit;
 }
 .partButton:hover,
 .partButton:focus {
   color: var(--hoverColor);
   background-color: transparent;
   border-color: var(--hoverColor);
+}
+
+.descriptionWrapper {
+  padding-bottom: 5px;
+}
+.accordionWrapper {
+  background-color: transparent;
+  border: none;
+}
+.accordion-body {
+  padding: 0;
+}
+.accordion-button {
+  background-color: transparent;
+  color: inherit;
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  transition: inherit;
+}
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: transparent;
+  box-shadow: none;
+}
+.accordion-button::after {
+  position: relative;
+  margin-left: 5px;
+  transition: background-image var(--transitionTime) ease,
+    transform 0.2s ease-in-out;
+}
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--arrowDropdownIcon);
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+.accordion-inner {
+  border-top: 0 none;
 }

@@ -1,8 +1,8 @@
 .sectionWrapper {
   background-color: var(--sectionBackground);
   color: var(--sectionText);
-  transition: background-color var(--transitionTime) ease;
-  transition: color var(--transitionTime) ease;
+  transition: color var(--transitionTime) ease,
+    background-color var(--transitionTime) ease;
 }
 .sectionRow {
   margin: 0;

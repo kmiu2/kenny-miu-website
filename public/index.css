@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Montserrat-Regular";
-  src: local("Montserrat-Regular"),
-    url(./Montserrat-Regular.woff) format("woff");
+  font-family: 'Montserrat-Regular';
+  src: local('Montserrat-Regular'),
+    url(./Montserrat-Regular.woff) format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Montserrat-Regular";
-  src: local("Montserrat-SemiBold"),
-    url(./Montserrat-SemiBold.woff) format("woff");
+  font-family: 'Montserrat-Regular';
+  src: local('Montserrat-SemiBold'),
+    url(./Montserrat-SemiBold.woff) format('woff');
   font-weight: bold;
   font-display: swap;
 }
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat-Regular";
+  font-family: 'Montserrat-Regular';
   --transitionTime: 0.3s;
   --hoverColor: #40bdf7;
   --appBackground: #0b4987;
@@ -38,9 +38,11 @@ body {
   --sidebarText: white;
   --sidebarBoxShadow: #cccccc;
   --sidebarHover: white;
+
+  --arrowDropdownIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --appBackground: #05203b;
   --homeNavBackground: #132331;
 
@@ -56,6 +58,8 @@ body {
   --sidebarText: rgba(255, 255, 255, 0.87);
   --sidebarBoxShadow: transparent;
   --sidebarHover: rgba(255, 255, 255, 0.87);
+
+  --arrowDropdownIcon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 .fullPageLoader {

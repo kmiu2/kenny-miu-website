@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap'
+import { Accordion, Button } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import NavLink from 'react-bootstrap/NavLink'
 import './Part.css'
@@ -29,11 +29,22 @@ export function Part(props: { part: IPart }) {
   } = props.part
 
   const renderDescription = (data: string[]) => {
-    return data.map((text) => (
-      <div className="descriptionText" key={text}>
-        {text}
+    return (
+      <div className="descriptionWrapper">
+        <Accordion className="accordionWrapper" defaultActiveKey="1">
+          <Accordion.Item className="accordionWrapper" eventKey="0">
+            <Accordion.Header>Read More</Accordion.Header>
+            <Accordion.Body>
+              {data.map((text) => (
+                <div className="descriptionText" key={text}>
+                  {text}
+                </div>
+              ))}
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </div>
-    ))
+    )
   }
 
   return (
