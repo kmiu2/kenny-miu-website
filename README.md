@@ -17,4 +17,4 @@ Here are my links:
 
 You can also find my resume directly here:
 
-- https://kennymiu.com/KennyMiuResume.pdf
+- https://kennymiu.com/resume-kenny.pdf
