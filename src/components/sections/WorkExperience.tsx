@@ -1,3 +1,4 @@
+import amazonImg from '../../assets/workExperience/amazon.jpg'
 import applyboardImg from '../../assets/workExperience/applyboard.png'
 import firstRoboticsImg from '../../assets/workExperience/first_robotics.png'
 import honeybeeLogoImg from '../../assets/workExperience/honeybee.svg'
@@ -9,6 +10,18 @@ import { Section } from '../reusable/Section'
 
 export function WorkExperience() {
   const parts: IPart[] = [
+    {
+      spotlight: true,
+      date: 'Nov 2024 - Present',
+      img: amazonImg,
+      link: 'https://www.amazon.com',
+      title: 'Software Development Engineer',
+      location: 'Toronto, Canada',
+      subtitle: 'Java, Typescript, Python, CDK, Lambda',
+      description: [
+        'The Item Exception Handling team focuses on building a flexible and scalable architecture that can adapt to a rapidly evolving global fulfillment infrastructure, leveraging innovative technologies that help enable the automation of the "unhappy" paths throughout Amazon\'s fulfillment operations. Whenever possible, our systems self-heal defects without interrupting the main inventory flow and without additional human input.',
+      ],
+    },
     {
       date: 'Jan 2023 - Aug 2023',
       img: smilecdrImg,
