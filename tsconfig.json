@@ -4,11 +4,6 @@
     "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin"
-      }
-    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "preserve",

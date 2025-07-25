@@ -10,7 +10,8 @@
     "serve": "serve -s build",
     "lint": "npm run lint:ts && npm run lint:css",
     "lint:ts": "eslint 'src/**/*.{ts,tsx,js}'",
-    "lint:css": "stylelint 'src/**/*.{css,scss}'"
+    "lint:css": "stylelint 'src/**/*.{css,scss}'",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,css,scss,json,md}'"
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
