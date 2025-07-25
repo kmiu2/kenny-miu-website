@@ -18,8 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+* {
+  font-family: 'Montserrat-Regular', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif !important;
+}
+
 body {
-  font-family: 'Montserrat-Regular';
   --transitionTime: 0.3s;
   --hoverColor: #40bdf7;
   --appBackground: #0b4987;

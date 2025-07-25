@@ -37,6 +37,7 @@
   font-weight: 200;
   line-height: 165%;
   padding-bottom: 20px;
+  color: var(--sectionText);
 }
 
 .partLink {
@@ -81,16 +82,16 @@
   padding: 0;
 }
 .accordion-button {
-  background-color: transparent;
-  color: inherit;
+  background-color: transparent !important;
+  color: var(--sectionText) !important;
   display: flex;
   font-size: 22px;
   justify-content: center;
   transition: inherit;
 }
 .accordion-button:not(.collapsed) {
-  color: inherit;
-  background-color: transparent;
+  color: var(--sectionText) !important;
+  background-color: transparent !important;
   box-shadow: none;
 }
 .accordion-button::after {
