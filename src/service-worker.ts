@@ -89,7 +89,6 @@ const CACHE_FILES = [
   './Montserrat-SemiBold.woff',
   './Montserrat-Regular.woff',
   'service-worker.js',
-  'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
 ]
 
 self.addEventListener('install', (event) => {
