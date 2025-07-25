@@ -25,3 +25,40 @@
   text-decoration: underline;
   transition: color var(--transitionTime) ease;
 }
+
+.contactFormHeading {
+  color: var(--contactTextLeft);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: color var(--transitionTime) ease;
+}
+
+.contactForm .form-label {
+  color: var(--contactTextLeft);
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color var(--transitionTime) ease;
+}
+.contactForm .form-control {
+  background-color: var(--contactBackground);
+  border: 2px solid var(--contactTextRight);
+  color: var(--contactTextRight);
+  transition: all var(--transitionTime) ease;
+}
+.contactForm .form-control:focus {
+  background-color: var(--contactBackground);
+  border-color: var(--contactTextLeft);
+  color: var(--contactTextRight);
+  box-shadow: 0 0 0 0.2rem rgba(var(--contactTextLeft), 0.25);
+}
+.contactForm .btn-primary {
+  background-color: var(--contactTextLeft);
+  border-color: var(--contactTextLeft);
+  color: var(--contactBackground);
+  transition: all var(--transitionTime) ease;
+}
+.contactForm .btn-primary:hover {
+  background-color: var(--contactTextRight);
+  border-color: var(--contactTextRight);
+}

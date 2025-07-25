@@ -1,6 +1,7 @@
 import { Col, Row } from 'react-bootstrap'
 import { useMediaQuery } from 'react-responsive'
 import './Contact.css'
+import { ContactForm } from './ContactForm'
 import { Social } from './Social'
 
 interface IContactInfo {
@@ -16,16 +17,6 @@ export function Contact() {
     {
       text: 'Location',
       value: 'Toronto, Canada',
-    },
-    {
-      text: 'Phone',
-      value: '+1 (647) 863 1337',
-      link: 'tel: +1 (647) 863 1337',
-    },
-    {
-      text: 'Email',
-      value: 'kennymiu2@gmail.com',
-      link: 'mailto: kennymiu2@gmail.com',
     },
     {
       text: 'Social',
@@ -58,6 +49,9 @@ export function Contact() {
   return (
     <div className={isMobile ? 'contactWrapper mobile' : 'contactWrapper'}>
       {renderRows(contactInfo)}
+      <hr />
+      <h5 className="contactFormHeading">Contact Me</h5>
+      <ContactForm />
     </div>
   )
 }
