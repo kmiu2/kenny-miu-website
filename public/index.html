@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <!-- Static form for Netlify bots -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root">
       <div class="fullPageLoader">
         <img width="200" src="./images/k_logo.png" alt="Kenny Miu logo" />
