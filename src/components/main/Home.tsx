@@ -6,14 +6,13 @@ import './Home.css'
 export function Home() {
   const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
 
-  return (
-    <div className="homeWrapper">
-      <div className={isMobile ? 'nameHeader mobile' : 'nameHeader'}>
-        Kenny Miu
-      </div>
-      <div className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}>
-        SDE @ Amazon
-      </div>
+  const profilePicture = () => (
+    <picture>
+      <source
+        srcSet="/images/me-small.webp 500w, /images/me.webp 1000w"
+        sizes="(max-width: 768px) 80vw, 500px"
+        type="image/webp"
+      />
       <img
         className="imgWrapper"
         src="/images/me.jpg"
@@ -23,6 +22,18 @@ export function Home() {
         width="1000"
         height="1333"
       />
+    </picture>
+  )
+
+  return (
+    <div className="homeWrapper">
+      <div className={isMobile ? 'nameHeader mobile' : 'nameHeader'}>
+        Kenny Miu
+      </div>
+      <div className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}>
+        SDE @ Amazon
+      </div>
+      {profilePicture()}
       <Spacer height={25} />
       <Button
         className="homeButton"
