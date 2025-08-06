@@ -15,14 +15,9 @@
     <link
       rel="preload"
       as="image"
-      href="%PUBLIC_URL%/images/me-small.webp"
-      media="(max-width: 768px)"
-    />
-    <link
-      rel="preload"
-      as="image"
       href="%PUBLIC_URL%/images/me.webp"
-      media="(min-width: 769px)"
+      imagesrcset="%PUBLIC_URL%/images/me-small.webp 600w, %PUBLIC_URL%/images/me.webp 1000w"
+      imagesizes="(max-width: 768px) 80vw, 500px"
     />
     <link rel="stylesheet" href="./index.css" />
   </head>
