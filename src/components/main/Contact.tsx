@@ -50,7 +50,7 @@ export function Contact() {
     <div className={isMobile ? 'contactWrapper mobile' : 'contactWrapper'}>
       {renderRows(contactInfo)}
       <hr />
-      <h5 className="contactFormHeading">Contact Me</h5>
+      <div className="contactFormHeading">Contact Me</div>
       <ContactForm />
     </div>
   )
