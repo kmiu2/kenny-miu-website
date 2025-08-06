@@ -1,6 +1,5 @@
 import Button from 'react-bootstrap/Button'
 import { useMediaQuery } from 'react-responsive'
-import meImage from '../../assets/base/me.jpg'
 import { Spacer } from '../reusable/Spacer'
 import './Home.css'
 
@@ -15,7 +14,15 @@ export function Home() {
       <div className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}>
         SDE @ Amazon
       </div>
-      <img className="imgWrapper" src={meImage} alt="me" />
+      <img
+        className="imgWrapper"
+        src="/images/me.jpg"
+        srcSet="/images/me-small.jpg 500w, /images/me.jpg 1000w"
+        sizes="(max-width: 768px) 80vw, 500px"
+        alt="me"
+        width="1000"
+        height="1333"
+      />
       <Spacer height={25} />
       <Button
         className="homeButton"

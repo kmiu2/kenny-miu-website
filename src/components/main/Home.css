@@ -26,6 +26,7 @@
   border-radius: 20px;
   width: 80%;
   max-width: 500px;
+  height: auto;
 }
 
 .homeButton {
