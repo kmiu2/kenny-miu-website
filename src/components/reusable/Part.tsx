@@ -31,7 +31,7 @@ export function Part(props: { part: IPart }) {
   const renderDescription = (data: string[]) => {
     return (
       <div className="descriptionWrapper">
-        <Accordion className="accordionWrapper" defaultActiveKey="1">
+        <Accordion className="accordionWrapper">
           <Accordion.Item className="accordionWrapper" eventKey="0">
             <Accordion.Header>Read More</Accordion.Header>
             <Accordion.Body>
