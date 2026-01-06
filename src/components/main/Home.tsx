@@ -21,6 +21,7 @@ export function Home() {
         alt="me"
         width="1000"
         height="1333"
+        fetchPriority="high"
       />
     </picture>
   )
