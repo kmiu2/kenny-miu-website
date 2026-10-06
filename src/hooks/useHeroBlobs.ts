@@ -36,8 +36,8 @@ const BLOBS: BlobConfig[] = [
     color: 'rgba(160, 220, 180, 0.35)',
     darkColor: 'rgba(60, 180, 120, 0.42)',
     size: 42,
-    speed: 0.00040,
-    a: 0.30,
+    speed: 0.0004,
+    a: 0.3,
     b: 0.38,
     phaseX: Math.PI,
     phaseY: Math.PI / 4,
@@ -48,7 +48,7 @@ const BLOBS: BlobConfig[] = [
     size: 50,
     speed: 0.00022,
     a: 0.35,
-    b: 0.40,
+    b: 0.4,
     phaseX: Math.PI * 1.5,
     phaseY: Math.PI * 0.75,
   },
@@ -56,7 +56,7 @@ const BLOBS: BlobConfig[] = [
     color: 'rgba(180, 140, 255, 0.30)',
     darkColor: 'rgba(120, 60, 220, 0.40)',
     size: 38,
-    speed: 0.00050,
+    speed: 0.0005,
     a: 0.45,
     b: 0.25,
     phaseX: Math.PI * 0.6,
@@ -109,16 +109,20 @@ export function useHeroBlobs(
 
       // Elliptical vignette mask — blobs fade at edges
       const gradient = ctx.createRadialGradient(
-        w / 2, h / 2, 0,
-        w / 2, h / 2, Math.max(w, h) * 0.65
+        w / 2,
+        h / 2,
+        0,
+        w / 2,
+        h / 2,
+        Math.max(w, h) * 0.65
       )
       gradient.addColorStop(0, 'rgba(0,0,0,1)')
       gradient.addColorStop(1, 'rgba(0,0,0,0)')
 
       // Draw each blob
       BLOBS.forEach((blob) => {
-        const px = (w / 2) + Math.sin(t * blob.speed + blob.phaseX) * (w * blob.a)
-        const py = (h / 2) + Math.cos(t * blob.speed + blob.phaseY) * (h * blob.b)
+        const px = w / 2 + Math.sin(t * blob.speed + blob.phaseX) * (w * blob.a)
+        const py = h / 2 + Math.cos(t * blob.speed + blob.phaseY) * (h * blob.b)
         const r = (blob.size / 100) * w * 0.5
 
         const radial = ctx.createRadialGradient(px, py, 0, px, py, r)

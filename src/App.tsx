@@ -65,7 +65,13 @@ export function App() {
               ))}
             </div>
             <div className="desktopNavRight">
-              <Social fillColour={theme === 'dark' ? 'rgba(255,255,255,0.65)' : 'rgba(35,39,66,0.6)'} />
+              <Social
+                fillColour={
+                  theme === 'dark'
+                    ? 'rgba(255,255,255,0.65)'
+                    : 'rgba(35,39,66,0.6)'
+                }
+              />
               <ThemeSwitch theme={theme} setTheme={setTheme} />
             </div>
           </nav>

@@ -11,7 +11,9 @@ export function Home() {
         <div className={isMobile ? 'nameHeader mobile' : 'nameHeader'}>
           Kenny Miu
         </div>
-        <div className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}>
+        <div
+          className={isMobile ? 'titlesSubheader mobile' : 'titlesSubheader'}
+        >
           SDE @ Amazon
         </div>
         <div className="heroSpacer" aria-hidden="true" />
