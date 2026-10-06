@@ -1,30 +1,21 @@
-import { Form } from 'react-bootstrap'
-import { useMediaQuery } from 'react-responsive'
+import { FiMoon, FiSun } from 'react-icons/fi'
 import './ThemeSwitch.css'
 
 export function ThemeSwitch(props: { theme: string; setTheme: any }) {
   const { theme, setTheme } = props
-  const isMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-
-  const switchTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+  const isDark = theme === 'dark'
 
   return (
-    <div
-      className={isMobile ? 'themeSwitchWrapper mobile' : 'themeSwitchWrapper'}
+    <button
+      className="themeSwitchBtn"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
     >
-      <Form>
-        <Form.Check
-          className={isMobile ? 'themeToggle mobile' : 'themeToggle'}
-          type="switch"
-          id="themeToggle"
-          aria-label="dark mode toggle"
-          label={theme === 'dark' ? '☾' : '☀'}
-          checked={theme === 'dark'}
-          onChange={switchTheme}
-        />
-      </Form>
-    </div>
+      {isDark ? (
+        <FiSun size={18} strokeWidth={2} />
+      ) : (
+        <FiMoon size={18} strokeWidth={2} />
+      )}
+    </button>
   )
 }

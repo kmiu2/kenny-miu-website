@@ -11,7 +11,6 @@
   text-align: center;
   font-weight: bold;
   color: var(--contactTextLeft);
-  text-transform: uppercase;
   padding: 20px;
   transition: color var(--transitionTime) ease;
 }
@@ -29,7 +28,6 @@
 .contactFormHeading {
   color: var(--contactTextLeft);
   font-weight: bold;
-  text-transform: uppercase;
   margin-bottom: 1rem;
   font-size: 1.25rem;
   transition: color var(--transitionTime) ease;

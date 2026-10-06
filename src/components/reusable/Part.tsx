@@ -1,6 +1,7 @@
 import { Accordion, Button } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import NavLink from 'react-bootstrap/NavLink'
+import { useFadeIn } from '../../hooks/useFadeIn'
 import './Part.css'
 
 export interface IPart {
@@ -28,6 +29,8 @@ export function Part(props: { part: IPart }) {
     title,
   } = props.part
 
+  const fadeRef = useFadeIn()
+
   const renderDescription = (data: string[]) => {
     return (
       <div className="descriptionWrapper">
@@ -48,7 +51,7 @@ export function Part(props: { part: IPart }) {
   }
 
   return (
-    <div className="partWrapper">
+    <div className="partWrapper fade-in" ref={fadeRef}>
       {date && <div className="dateText">{date}</div>}
       <div className="titleText">
         <NavLink

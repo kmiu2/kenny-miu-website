@@ -1,113 +1,118 @@
-.sidebarWrapper {
+/* ── Single sticky wrapper ────────────────────────────────────── */
+.mobileNavWrapper {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  /* Same translucency as desktop homeNav */
+  background-color: var(--homeNavBackground);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--sectionDivider);
+  transition: background-color var(--transitionTime) ease,
+    border-color var(--transitionTime) ease;
+}
+
+/* ── Top bar inside the wrapper ──────────────────────────────── */
+.mobileTopNav {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  height: 52px;
+}
+
+/* Hamburger button */
+.mobileHamburger {
+  background: none;
+  border: none;
+  padding: 6px;
+  color: var(--navTextHover);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color var(--transitionTime) ease;
+}
+.mobileHamburger:hover {
+  background-color: var(--sectionDivider);
+}
+
+/* Pushes right side to the end */
+.mobileNavSpacer {
+  flex: 1;
+}
+
+/* Right: socials + theme icon */
+.mobileNavRight {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Sun / moon icon button */
+.mobileThemeBtn {
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  color: var(--navTextHover);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color var(--transitionTime) ease;
+}
+.mobileThemeBtn:hover {
+  background-color: var(--sectionDivider);
+}
+
+/* ── Dropdown — relative inside sticky wrapper ───────────────── */
+.mobileDropdown {
   position: relative;
-  z-index: 1;
-}
-
-.menuButton {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  border: 0;
-  border-radius: 0px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: black;
-  font-size: 18px;
-  text-transform: uppercase;
-  line-height: 25px;
-}
-.menuButton:hover,
-.menuButton:focus {
-  background-color: var(--hoverColor);
-}
-.menuButton.boxShadow {
-  box-shadow: 3px 3px 3px 3px var(--sidebarBoxShadow);
-}
-
-.menuIcon {
-  vertical-align: text-top;
-  padding-top: 3px;
-  padding-right: 5px;
-}
-
-.navOverlay {
-  width: 100%;
-  background-color: var(--sidebarOverlay);
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-.navOverlay.active {
-  opacity: 0.75;
-  pointer-events: auto;
-  transition: 350ms;
-}
-.navOverlay.inactive {
-  opacity: 0;
-  pointer-events: none;
-  transition: 350ms;
-}
-
-.navMenu {
-  background-color: var(--sidebarBackground);
-  width: 250px;
-  height: 100vh;
   display: flex;
-  position: fixed;
-  top: 0;
-  right: -100%;
   flex-direction: column;
-  align-items: flex-start;
-  transition: background-color var(--transitionTime) ease;
+  background-color: var(--appBackground);
+  border-top: 1px solid var(--sectionDivider);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.28s ease, opacity 0.22s ease;
 }
-.navMenu.active {
-  right: 0;
-  transition: 350ms;
-}
-.navMenu.inactive {
-  right: -100%;
-  transition: 350ms;
+.mobileDropdown.open {
+  max-height: 400px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.navText {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  list-style: none;
-  height: 60px;
-}
-.navText a {
+.mobileDropLink {
+  padding: 15px 20px;
+  color: var(--navText);
   text-decoration: none;
-  color: var(--sidebarText);
-  padding-left: 20px;
-  font-size: 18px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-radius: 0px;
-  transition: color var(--transitionTime) ease;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--sectionDivider);
+  transition: color var(--transitionTime) ease,
+    background-color 0.15s ease;
 }
-.navText a:hover,
-.navText a:focus {
-  color: black;
-  background-color: var(--sidebarHover);
+.mobileDropLink:last-child {
+  border-bottom: none;
+}
+.mobileDropLink:hover,
+.mobileDropLink.active {
+  color: var(--navTextHover);
+  background-color: var(--sectionDivider);
 }
 
-.navMenuItems {
-  width: 100%;
-  padding: 0;
-  list-style-type: none;
+/* ── Backdrop ────────────────────────────────────────────────── */
+.mobileNavBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  animation: backdropFadeIn 0.2s ease;
 }
-
-.navbarToggle {
-  color: white;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  padding-top: 8px;
-  padding-left: 18px;
-  justify-content: flex-start;
-  align-items: center;
+@keyframes backdropFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

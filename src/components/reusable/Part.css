@@ -56,12 +56,12 @@
 
 .partButton {
   color: inherit;
-  border: 3px solid;
+  border: 2px solid;
   background-color: transparent;
   border-radius: 0px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   transition: inherit;
 }
 .partButton:hover,
@@ -78,8 +78,14 @@
   background-color: transparent;
   border: none;
 }
+/* Override Bootstrap's hardcoded white backgrounds */
+.accordionWrapper .accordion-item {
+  background-color: transparent !important;
+  border: none;
+}
 .accordion-body {
   padding: 0;
+  background-color: transparent !important;
 }
 .accordion-button {
   background-color: transparent !important;

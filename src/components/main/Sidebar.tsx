@@ -1,62 +1,79 @@
-import { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button'
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { useState } from 'react'
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import { NavLink } from 'react-router-dom'
 import { urlLinks } from '../../App'
-import './Sidebar.css'
 import { Social } from './Social'
-import { ThemeSwitch } from './ThemeSwitch'
+import './Sidebar.css'
 
 export function Sidebar(props: { theme: string; setTheme: any }) {
   const { theme, setTheme } = props
-  const [shouldShowShadow, setShouldShowShadow] = useState(false)
+  const isDark = theme === 'dark'
+  const [open, setOpen] = useState(false)
 
-  useEffect(() => {
-    function onScroll() {
-      if (window.pageYOffset > 900) {
-        setShouldShowShadow(true)
-      } else {
-        setShouldShowShadow(false)
-      }
-    }
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [shouldShowShadow])
-
-  const [sidebarActive, setSidebarActive] = useState(false)
-  const toggleSidebar = () => setSidebarActive(!sidebarActive)
+  const toggleTheme = () => setTheme(isDark ? 'light' : 'dark')
+  const closeMenu = () => setOpen(false)
 
   return (
-    <div className="sidebarWrapper">
-      <Button
-        className={shouldShowShadow ? 'menuButton boxShadow' : 'menuButton'}
-        onClick={toggleSidebar}
-      >
-        <AiOutlineMenu className="menuIcon" />
-        Menu
-      </Button>
-      <div
-        className={sidebarActive ? 'navOverlay active' : 'navOverlay inactive'}
-        onClick={toggleSidebar}
-      />
-      <div className={sidebarActive ? 'navMenu active' : 'navMenu inactive'}>
-        <ul className="navMenuItems" onClick={toggleSidebar}>
-          <li className="navbarToggle">
-            <AiOutlineClose size={22} />
-          </li>
-          {urlLinks.map((link) => {
-            return (
-              <li key={link.path} className="navText">
-                <NavLink to={link.path}>{link.text}</NavLink>
-              </li>
-            )
-          })}
-          <li className="navbarToggle">
-            <Social />
-          </li>
-        </ul>
-        <ThemeSwitch theme={theme} setTheme={setTheme} />
+    <>
+      {/* Single sticky wrapper — bar + dropdown move together */}
+      <div className="mobileNavWrapper">
+        <nav className="mobileTopNav" aria-label="Main navigation">
+          <button
+            className="mobileHamburger"
+            aria-label="Open menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
+
+          <div className="mobileNavSpacer" />
+
+          <div className="mobileNavRight">
+            <Social
+              fillColour={
+                isDark ? 'rgba(255,255,255,0.7)' : 'rgba(35,39,66,0.65)'
+              }
+            />
+            <button
+              className="mobileThemeBtn"
+              aria-label="Toggle theme"
+              onClick={toggleTheme}
+            >
+              {isDark ? (
+                <FiSun size={18} strokeWidth={2} />
+              ) : (
+                <FiMoon size={18} strokeWidth={2} />
+              )}
+            </button>
+          </div>
+        </nav>
+
+        {/* Dropdown sits inside the sticky wrapper — no fixed positioning needed */}
+        <div className={open ? 'mobileDropdown open' : 'mobileDropdown'}>
+          {urlLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              className={({ isActive }) =>
+                isActive ? 'mobileDropLink active' : 'mobileDropLink'
+              }
+              to={link.path}
+              onClick={closeMenu}
+            >
+              {link.text}
+            </NavLink>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Backdrop rendered outside wrapper so it covers the whole page */}
+      {open && (
+        <div
+          className="mobileNavBackdrop"
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+      )}
+    </>
   )
 }

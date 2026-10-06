@@ -1,55 +1,68 @@
 .appWrapper {
+  position: relative;
   background-color: var(--appBackground);
   transition: background-color var(--transitionTime) ease;
 }
-.desktopPadding {
-  padding: 0 7.5%;
-}
-.mobilePadding {
-  padding: 0;
+
+/* Keep blob canvas behind everything; sticky nav must NOT get position:relative */
+.appWrapper > *:not(canvas):not(nav):not(.mobileNavWrapper) {
   position: relative;
+  z-index: 1;
 }
 
-.homeNav {
-  background-color: var(--homeNavBackground);
-  transition: background-color var(--transitionTime) ease;
-  padding: 8px 16px;
+/* ── Desktop layout ────────────────────────────────────────────── */
+/* Single padded column — nav + main content, one padding source */
+.pageContainer {
+  position: relative;
+  z-index: 1;
+  padding: 0 7.5%;
 }
-.homeNavCollapse {
-  justify-content: end;
+
+/* Nav is a direct child of appWrapper — naturally full-width */
+.homeNav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  margin: 0 7.5%;
+  background-color: var(--homeNavBackground);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--sectionDivider);
+  transition: background-color var(--transitionTime) ease,
+    border-color var(--transitionTime) ease;
+}
+
+/* Main content column — same 7.5% inset as the nav padding */
+.pageContainer {
+  position: relative;
+  z-index: 1;
+  padding: 0 7.5%;
+}
+
+.desktopNavLinks {
+  display: flex;
+  align-items: center;
+}
+
+.desktopNavRight {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .navLink {
-  padding: 16px;
-  color: rgba(255, 255, 255, 0.5);
+  padding: 10px 14px;
+  color: var(--navText);
   text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transitionTime) ease;
 }
 .navLink:hover,
-.navLink:focus {
-  color: white;
-}
-
-.skipNavigationButton {
-  border: 2.5px solid white;
-  background-color: transparent;
-  border-radius: 0;
-  min-width: 275px;
-  width: 10%;
-  font-size: 1.25rem;
-  font-weight: bold;
-  top: 7.5px;
-  left: 7.5px;
-  position: absolute;
-  transform: translateY(-120%);
-}
-.skipNavigationButton:focus {
-  transform: translateY(0);
-  color: var(--hoverColor);
-  background-color: transparent;
-  border-color: var(--hoverColor);
-}
-.skipNavigationButton:hover {
-  color: var(--hoverColor);
-  background-color: transparent;
-  border-color: var(--hoverColor);
+.navLink:focus,
+.navLink.active {
+  color: var(--navTextHover);
 }

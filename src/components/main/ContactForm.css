@@ -1,7 +1,6 @@
 .contactForm .form-label {
   color: var(--contactTextLeft);
   font-weight: bold;
-  text-transform: uppercase;
   transition: color var(--transitionTime) ease;
 }
 .contactForm .form-control {
